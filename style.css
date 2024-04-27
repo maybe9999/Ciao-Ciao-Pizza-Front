@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+/* ------------------------------------ General ---------------------------------------------*/
+
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +10,10 @@ body {
     background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
     background-position: center; /* Centra la imagen */
 }
+/* ------------------------------------ Fin General ---------------------------------------------*/
+
+
+/* ------------------------------------ Inicio Header (Cabecera) ---------------------------------------------*/
 
 header {
     display: flex;
@@ -23,13 +29,6 @@ h1 {
     color: white; /* Color del texto */
 }
 
-.text {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 60px;
-    color: rgba(255, 255, 255, 0.808);
-    margin-right: 10px;
-    padding-top: 150px;
-}
 nav {
     font-family: 'Josefin Sans', sans-serif;
     margin-right: 100px; /* Ajuste del margen derecho */
@@ -52,4 +51,17 @@ nav a:hover {
 
 nav:not(:last-child) {
     margin-right: 20px; /* Espaciado entre elementos de navegación */
+}
+
+/* ------------------------------------ Fin Header (Cabecera) ---------------------------------------------*/
+
+
+/* ------------------------------------------ Inicio main -------------------------------------------------*/
+
+.text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.808);
+    margin-right: 10px;
+    padding-top: 150px;
 }
