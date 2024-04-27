@@ -17,11 +17,13 @@ body {
 
 header {
     display: flex;
+    position: fixed; /* Hace que se quedo fijo arriba aunque la pagina se mueva*/
     align-items: center; /* Centrar verticalmente el header */
     background-color: rgba(250, 39, 39, 0.553); /* Color de fondo semi-transparente */
+    width: 100%;
 }
 
-header img{
+header img{ /*Ajusta las dimensiones del icono de la pagina para el header/cabecera */
     margin-left: 2%;
     width: 8%;
     height: 8%;
@@ -67,11 +69,13 @@ nav:not(:last-child) {
 .video{
     display: flex;
     background-position: center;
+    background-color: black;
     width: 100%;
     height: 100%;
+    background-size: cover;
+    .video_etiqueta{
+        margin-top: 9%;
+    }
 }
 
-.video_etiqueta{
-    width:100%;
-}
 
