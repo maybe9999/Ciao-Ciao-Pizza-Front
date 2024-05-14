@@ -21,7 +21,6 @@ header {
     align-items: center; /* Centrar verticalmente el header */
     background-color: rgba(250, 39, 39, 0.553); /* Color de fondo semi-transparente */
     width: 100%;
-    height: 16%;
 }
 
 header img{ /*Ajusta las dimensiones del icono de la pagina para el header/cabecera */
@@ -47,17 +46,25 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 17px;
-    padding: 20px 10px;
+    padding: 25px 10px;
     background-color: transparent; /* Fondo transparente */
     border: 2px solid transparent; /* Borde transparente */
     border-radius: 5px; /* Bordes redondeados */
     transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover {
-    background-color: rgb(40, 1, 1); /* Cambiar el fondo al pasar el mouse */
+/* Fijar el color del fondo al seleccionar la pestaña*/
+nav a:hover{
+    background-color: rgb(255, 255, 255); /* Cambiar el fondo al pasar el mouse o cuando está activo */
+    color: black;
 }
 
+nav a.activa{
+    background-color: rgb(255, 255, 255); /* Cambiar el fondo al pasar el mouse o cuando está activo */
+    color: black;
+}
+
+/* Fin de función "Activa"*/
 nav:not(:last-child) {
     margin-right: 20px; /* Espaciado entre elementos de navegación */
 }
@@ -67,16 +74,79 @@ nav:not(:last-child) {
 
 /* ----------------------------------------- Inicio main --------------------------------------------------*/
 
-.video{
+main{
+    width: 100%;
+}
+
+.img_y_text{
     display: flex;
+    background-image: url(/img/C14.jpg);
     background-position: center;
-    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    justify-content: center;
-    .video_etiqueta{
-        justify-content: center;
-        margin-top: 9%;
+}
+
+.text_prin{
+    color:rgb(255, 224, 224);
+    font-size: 7vh;
+    padding-left: 69%;
+    padding-top: 0%;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, 19px 23px 13px rgba(206,89,55,0.5);
+}
+
+.pizzas{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    .Cabecera_de_presentacion{
+        text-align: center;
+        font-size: 7vh;
+        
+        width: 100%;
+        padding: 3px;
+        margin: 0%;
+        color: #000000;
+        
+        text-shadow: 4px 3px 0 #7a7a7a63;
+        
     }
+    
+    .tamaño:hover img{
+        background: #000000;
+    }
+
+    /* Fin de función "Activa"*/
+    .tamaño:not(:last-child) {
+        margin-right: 20px; /* Espaciado entre elementos de navegación */
+    }
+
+    .tamaño{
+        background-size: cover;
+        margin: 2%;
+        width: 20%;
+        height: 30%;
+        .P_img{
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .R_img{     
+
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    } 
 }
