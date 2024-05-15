@@ -1,0 +1,64 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciao Ciao Pizza</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="nuestra-carta">
+    <header>
+        <img src="/ICO CIAO CIAO PIZZA/Upscaler/svg/Para_sacar_ico_final1_upscaler.svg" alt="Ico pizzeria">
+
+        <h1><a href="/index.html">Ciao Ciao Pizza</a></h1>
+
+        <nav><a href="#" class="nav-link" data-target="left">NOSOTROS</a></nav> <!-- Lucas-->
+        <nav><a href="/Productos/productos.html" class="nav-link P-Act" data-target="left">PRODUCTOS</a></nav> <!-- Matias-->
+        <nav><a href="carta.html" class="nav-link C-Act" data-target="left">NUESTRA CARTA</a></nav><!-- Alexis-->
+        <nav><a href="/Contacto/index.html" class="nav-link" data-target="left">CONTACTO</a></nav><!-- Marcia-->
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="item header">
+                <div class="cartas header-cartas" onclick="mostrarCartas(0)">Clásicas</div>
+                <div class="cartas header-cartas" onclick="mostrarCartas(1)">De la Casa</div>
+                <div class="cartas header-cartas" onclick="mostrarCartas(2)">Otros Menús</div>
+            </div>
+            <div class="item left" id="left-0">
+                <div class="cartas" data-imagen="../img/EMILIA.jpeg">PIZZA EMILIA</div>
+                <div class="cartas" data-imagen="../img/PALMITOS.jpeg">PALMITOS</div>
+                <div class="cartas" data-imagen="../img/RUCULA.jpeg">RÚCULA</div>
+                <div class="cartas" data-imagen="../img/FUGAZZA.jpeg">FUGAZZA</div>
+                <div class="cartas" data-imagen="../img/ESPECIAL.jpeg">ESPECIAL</div>
+                <div class="cartas" data-imagen="../img/STELLA.jpeg">PIZZA STELLA</div>
+                <div class="cartas" data-imagen="../img/BIANCA.jpeg">PIZZA BIANCA</div>
+            </div>
+            <div class="item left" id="left-1" style="display: none;">
+                <div class="cartas" data-imagen="../img/francesca.jpg">FRANCESCA</div>
+                <div class="cartas" data-imagen="../img/isabella.jpg">ISABELLA</div>
+                <div class="cartas" data-imagen="../img/roquefort.jpg">ROQUEFORT</div>
+                <div class="cartas" data-imagen="../img/chiara.jpg">CHIARA</div>
+                <div class="cartas" data-imagen="../img/GIANNI.jpg">GIANNINA</div>
+                <div class="cartas" data-imagen="../img/MARGHE.jpg">MARGHERITA</div>
+                <div class="cartas" data-imagen="../img/DONATELLA.jpg">DONATELLA</div>
+            </div>
+            <div class="item left" id="left-2" style="display: none;">
+                <div class="cartas" data-imagen="../img/papascheddar.jpg">PAPAS CON CHEDDAR</div>
+                <div class="cartas" data-imagen="../img/papasciaociao.png">PAPAS CIAO CIAO</div>
+                <div class="cartas" data-imagen="../img/papaspicante.png">PAPAS C/SALSA PICANTE</div>
+                <div class="cartas" data-imagen="../img/patitasdepollo.jpg">PATITAS DE POLLO</div>
+                <div class="cartas" data-imagen="../img/ensaladarucula.jpg">ENSALADA RÚCULA</div>
+                <div class="cartas" data-imagen="../img/CHEESECAKE.png">CHEESECAKE</div>
+                <div class="cartas" data-imagen="../img/tiramisu.png">TIRAMISÚ</div>
+            </div>
+            <div class="item contenido">
+                <div class="carta-imagen"></div>
+                <div class="carta-texto"></div>
+            </div>
+        </section>
+    
+    <script src="javascript.js"></script>
+
+</body>
+</html>

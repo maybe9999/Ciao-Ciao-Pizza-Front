@@ -2,23 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* ------------------------------------ General ---------------------------------------------*/
-
 body {
     margin: 0;
     padding: 0;
-    background-image: url('./img/pizza1.jpg'); /* Aca se ponemos la imagen de fondo */
-    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
-    background-position: center; /* Centra la imagen */
+    background-size: cover;
+    background-position: center;
 }
+/* body.index para sólo utilizar la imágen de fondo en index*/
+body.index {
+    background-image: url('./img/img_index.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
 /* ------------------------------------ Fin General ---------------------------------------------*/
 
 
 /* ------------------------------------ Inicio Header (Cabecera) ---------------------------------------------*/
 
+header img{ /* Ajusta las dimensiones del ICONO de la pagina para el header/cabecera */
+    margin-left: 2%;
+    width: 8%;
+    height: 80%;
+}
+
 header {
     display: flex;
     align-items: center; /* Centrar verticalmente el header */
     background-color: rgba(250, 39, 39, 0.553); /* Color de fondo semi-transparente */
+    position: fixed; /* Fijar la posición del encabezado */
+    top: 0; /* Fijar en la parte superior */
+    left: 0; /* Fijar en la parte izquierda */
+    width: 100%; /* Ocupar el ancho completo */
 }
 
 h1 {
@@ -45,13 +60,18 @@ nav a {
     transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover {
-    background-color: rgb(71, 58, 58); /* Cambiar el fondo al pasar el mouse */
-}
+/* Fijar el color del fondo al seleccionar la pestaña*/
+nav a:hover,
+nav a.activa {
+    background-color: rgb(255, 255, 255); /* Cambiar el fondo al pasar el mouse o cuando está activo */
+    color: black;
 
+}
+/* Fin de función "Activa"*/
 nav:not(:last-child) {
     margin-right: 20px; /* Espaciado entre elementos de navegación */
 }
+
 
 /* ------------------------------------ Fin Header (Cabecera) ---------------------------------------------*/
 
@@ -63,10 +83,9 @@ nav:not(:last-child) {
     font-size: 60px;
     color: rgba(255, 255, 255, 0.808);
     margin-right: 10px;
-    padding-top: 150px;
+    padding-top: 350px;
+    
 }
 
-.foto_principal{
-    background-size: cover;
-    background-position: center;
-}
+
+

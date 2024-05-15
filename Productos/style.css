@@ -20,10 +20,12 @@ header {
     position: fixed; /* Hace que se quedo fijo arriba aunque la pagina se mueva*/
     align-items: center; /* Centrar verticalmente el header */
     background-color: rgba(250, 39, 39, 0.553); /* Color de fondo semi-transparente */
+    top: 0; /* Fijar en la parte superior */
+    left: 0; /* Fijar en la parte izquierda */
     width: 100%;
 }
 
-header img{ /*Ajusta las dimensiones del icono de la pagina para el header/cabecera */
+header img{ /* Ajusta las dimensiones del ICONO de la pagina para el header/cabecera */
     margin-left: 2%;
     width: 8%;
     height: 80%;
@@ -35,6 +37,16 @@ h1 {
     margin-left: 20px;
     margin-right: auto; /* Empuja todo a la izquierda */
     color: white; /* Color del texto */
+    text-decoration: none;
+}
+
+h1 a{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 65px;
+    margin-left: 20px;
+    margin-right: auto; /* Empuja todo a la izquierda */
+    color: white; /* Color del texto */
+    text-decoration: none;
 }
 
 nav {
@@ -53,21 +65,17 @@ nav a {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Fijar el color del fondo al seleccionar la pestaña*/
-nav a:hover{
+nav a:hover,
+nav a.P-Act{
     background-color: rgb(255, 255, 255); /* Cambiar el fondo al pasar el mouse o cuando está activo */
     color: black;
-}
 
-nav a.activa{
-    background-color: rgb(255, 255, 255); /* Cambiar el fondo al pasar el mouse o cuando está activo */
-    color: black;
 }
-
 /* Fin de función "Activa"*/
 nav:not(:last-child) {
     margin-right: 20px; /* Espaciado entre elementos de navegación */
 }
+
 
 /* ------------------------------------ Fin Header (Cabecera) ---------------------------------------------*/
 
@@ -126,6 +134,11 @@ main{
     /* Fin de función "Activa"*/
     .tamaño:not(:last-child) {
         margin-right: 20px; /* Espaciado entre elementos de navegación */
+    }
+
+    .tamaño.Fugazza{
+        background-color: red;
+        background-image: url(https://i.postimg.cc/rmbbFJW5/Fugazza-R1.png);
     }
 
     .tamaño{

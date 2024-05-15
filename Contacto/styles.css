@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* ------------------------------------ General ---------------------------------------------*/
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("img/WhatsApp Image 2024-04-27 at 17.13.52.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------------------------ Fin General ---------------------------------------------*/
+
+
+/* ------------------------------------ Inicio Header (Cabecera) ---------------------------------------------*/
+
+header{
+    display: flex;
+    position: fixed; /* Hace que se quedo fijo arriba aunque la pagina se mueva*/
+    align-items: center; /* Centrar verticalmente el header */
+    background-color: rgba(250, 39, 39, 0.553); /* Color de fondo semi-transparente */
+    top: 0; /* Fijar en la parte superior */
+    left: 0; /* Fijar en la parte izquierda */
+    width: 100%;
+}
+
+header img{ /* Ajusta las dimensiones del ICONO de la pagina para el header/cabecera */
+    margin-left: 2%;
+    width: 8%;
+    height: 80%;
+}
+
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 55px;
+    margin-left: 20px;
+    margin-right: auto; /* Empuja todo a la izquierda */
+    color: white; /* Color del texto */
+    text-align: center;
+}
+
+h1 a{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 65px;
+    margin-left: 20px;
+    margin-right: auto; /* Empuja todo a la izquierda */
+    color: white; /* Color del texto */
+    text-decoration: none;
+}
+
+nav {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-right: 100px; /* Ajuste del margen derecho */
+    justify-content: right;
+    
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 25px 10px;
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid transparent; /* Borde transparente */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+nav a:hover,
+nav a.I-Act{
+    background-color: rgb(255, 255, 255); /* Cambiar el fondo al pasar el mouse o cuando está activo */
+    color: black;
+
+}
+/* Fin de función "Activa"*/
+
+nav:not(:last-child) {
+    margin-right: 20px; /* Espaciado entre elementos de navegación */
+}
+
+/* ------------------------------------ Fin Header (Cabecera) ---------------------------------------------*/
+
+
+/* ------------------------------------------ Inicio main -------------------------------------------------*/
+
+main{
+    display: flex;
+    align-items: center; /* Centrar verticalmente el header */
+    justify-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    flex-direction: column;
+    border-radius: 30px;
+}
+
+.contenedor-parrafos{
+    margin-top: 8%;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.parrafo{
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
+.formulario-contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px, 1px, 11px white;
+    border-radius: 20px;
+    padding: 0px;
+    width: 20%;
+    padding-right: 2%;
+
+    /*justify-content: center;
+    text-align: center;*/
+}
+
+#myForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.cont-info{
+    width: 100%;
+}
+
+.info-cliente{
+    border: 1px solid gold;
+    border-radius: 10px;
+    height: 40px;
+    width:100%;
+    padding:15px;
+    margin:0px;
+}
+
+.mensaje{
+    resize: vertical;
+    border: 1px solid gold;
+    border-radius: 10px;
+    height: 200px;
+    width:100%;
+    padding:15px;
+    margin-top:4%;
+}
+
+.contenedor-enviar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.botón{
+    border: 3px solid gold;
+    border-radius:10px;
+    min-height:20px 20px 20px 20px;
+    padding:10px 15px;
+    position: relative;
+    margin-left: 10%;
+}
+
+/* ------------------------------------------ Fin main -------------------------------------------------*/
+
+/* ------------------------------------------ Inicio Footer -------------------------------------------------*/
+
+footer{
+    background-color: rgba(250, 39, 39, 0.553);
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+}
+.info-ubicación{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(250, 39, 39, 0.553); /* Color de fondo semi-transparente */
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+
+}
+.ubicación{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+.contenedor{
+    padding: 80px 0;
+}
+.contenedor-texto{
+    width: 40%;
+}
+.izquierda{
+    text-align: center;
+}
+.título{
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 35px;
+    margin-bottom: 30px ;
+}
+.ubicación .contenedor-texto{
+    width: 40%;
+}
+.redes-sociales{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+}
+.footer_social{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    
+}
+.derechos-reservados{
+    margin-top: 20px;
+}
+.whatsapp-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 60px;
+    height:60px;
+    border-radius: 60%;
+    background-color: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: opx 2px 0px rgba(0, 0, 0, 0.3);
+    animation: breathe 2s ease-in-out infinite;
+
+
+}
+
+/* ------------------------------------------ Fin Footer -------------------------------------------------*/
