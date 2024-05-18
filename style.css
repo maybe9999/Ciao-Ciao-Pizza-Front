@@ -2,23 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* ------------------------------------ General ---------------------------------------------*/
-body {
+
+
+
+body{ /* Propiedades de todos los body*/
     margin: 0;
     padding: 0;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-}
-/* body.index para sólo utilizar la imágen de fondo en index*/
-body.index {
-    background-image: url('./img/img_index.jpeg');
-    background-size: cover;
-    background-position: center;
+    
 }
 
+/* body cambia UNICAMENTE la foto del INDEX*/
+body.index_{ 
+    background-image: url('./img/img_index_11.webp');
+    min-height: 100vh;
+}
+body.nosotros{
+    background-image: url('./img/img_index_11.webp');
+    display: flex;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+/* body.nuestra-carta para sólo utilizar la imágen de fondo en otro navegador*/
+body.nuestra-carta {
+    background-image: url('./img/portada_productos_11zon.webp');
+}
+/*body.contacto para su fondo de pantalla*/
+body.contacto{
+    background-image: url('./img/img_index_11.webp');
+}
+/*body.productos para su fondo de pantalla*/
+body.productos .main_prod .img_y_text{
+    background-image: url('./img/portada_productos_11zon.webp');
+}
 /* ------------------------------------ Fin General ---------------------------------------------*/
 
 
-/* ------------------------------------ Inicio Header (Cabecera) ---------------------------------------------*/
+
+
+/* ------------------------------------------------- Inicio Header (Cabecera) - (Compartido) ----------------------------------------------*/
 
 header img{ /* Ajusta las dimensiones del ICONO de la pagina para el header/cabecera */
     margin-left: 2%;
@@ -34,6 +59,8 @@ header {
     top: 0; /* Fijar en la parte superior */
     left: 0; /* Fijar en la parte izquierda */
     width: 100%; /* Ocupar el ancho completo */
+    height: 11vh;
+    z-index: 1000;
 }
 
 h1 {
@@ -42,6 +69,11 @@ h1 {
     margin-left: 20px;
     margin-right: auto; /* Empuja todo a la izquierda */
     color: white; /* Color del texto */
+}
+
+h1 a{
+    color: white; /* Color del texto */
+    text-decoration: none;
 }
 
 nav {
@@ -73,19 +105,790 @@ nav:not(:last-child) {
 }
 
 
-/* ------------------------------------ Fin Header (Cabecera) ---------------------------------------------*/
+/* ---------------------------------------------- Fin Header (Cabecera) - (COMPARTIDO)--------------------------------------------------*/
 
 
-/* ------------------------------------------ Inicio main -------------------------------------------------*/
+/* ------------------------------------------ Inicio main, seccion: INICIO -------------------------------------------------*/
+main{
+    padding: 0%;
+}
 
 .text {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 60px;
-    color: rgba(255, 255, 255, 0.808);
+    color: rgba(0, 0, 0, 0.6);
     margin-right: 10px;
-    padding-top: 350px;
-    
+    padding-top: 350px;   
+}
+/* ------------------------------------------ Fin main, seccion: INICIO -------------------------------------------------*/
+
+
+/* ------------------------------------------ Inicio main, seccion: NOSOTROS -------------------------------------------------*/
+.main_nosotros{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.conteiner {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+
+    margin-top: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.imagen {
+    border: 1px;
+    margin-left: 5vh;
+    width: 40vh;
+    justify-self: center;
+    vertical-align: center;
+}
+
+.texto {
+    border: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vh;
+    color: white;
+    text-align: justify;
+    width: 100vh;
+    justify-self: center;
+    align-self: center;
+    padding: 4vh;
 }
 
 
+/* ------------------------------------------ Fin main seccion: NOSOTROS -------------------------------------------------*/
 
+
+/* ---------------------------------------------------------- Inicio main seccion: PRODUCTOS  -------------------------------------------------------*/
+
+/*  ----------    PORTADA  PRODUCTOS  ---------- */
+.img_y_text{  /* FOTO DE INICIO */
+    display: flex;
+    align-items: center;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+
+}
+.text_prin {
+    color: rgb(255, 224, 224);
+
+    font-size: 7vh;
+    padding-left: 100vh;
+    margin-bottom: 30vh;
+
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, 19px 23px 13px rgba(206,89,55,0.5);
+  }
+
+/*  ----------   FIN PORTADA    ---------- */
+
+/*  ----------    PIZZAS Y OTROS PRODUCTOS    ---------- */
+
+.pizzas{ /* SECCION PIZZAS (ES LO MISMO QUE .PAPAS*/
+    display: flex;
+    justify-content:space-evenly;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    background-color: white !important;
+}
+.papas{
+    display: flex;
+
+    justify-content:space-evenly;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+
+    background-color: white !important;
+}
+
+.Cabecera_de_presentacion{ /* TEXTO DONDE SE PRESENTA EL PRODUCTO (PIZZAS O OTROS)*/ 
+    text-align: center;
+    font-size: 11vh;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    
+    width: 100%;
+    padding: 3px;
+    margin: 0%;
+    color: #000000;
+    
+    text-shadow: 4px 3px 0 #7a7a7a63;   
+}
+
+.tamaño { /* CONTENEDOR DE FOTO Y TEXTO DE FOTO (.R_IMG Y .PARR)*/
+    position: relative;
+
+    margin: 2%;
+    width: 20%;
+    height: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
+
+.R_img {
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    filter: brightness(115%);
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.parr{
+    position: absolute;
+    padding: 10px;
+    border-radius: 0px;
+    top: 40%;
+    left: 50%;
+    
+    color: #ffffff; /* texto negro */
+    background-color: rgba(0, 0, 0, 0.096); /* fondo blanco semi-transparente */
+    backdrop-filter: blur(2px);
+    opacity: 0;
+
+    justify-self: center;
+    align-self: center;
+
+    
+
+    font-size: 3vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+
+.tamaño:hover .parr { /* HACE VISIBLE EL TEXTO DE LAS FOTOS AL PASAR POR ENCIMA*/
+    opacity: 1;
+}
+
+.tamaño:hover .R_img{ /* AGRANDA LAS FOTOS Y LE QUITA BRILLO PASAR POR ENCIMA*/
+    transform: scale(1.15); /* agrandar la imagen un 10% */
+    filter:brightness(75%); /* REDUCE EL BRILLO*/
+}
+
+/* ------------------------------------------------------------------ FIN MAIN seccion: PRODUCTOS  -------------------------------------------------------*/
+
+
+
+/* ------------------------------------------ Inicio main seccion: CONTACTOS-------------------------------------------------*/
+.main-form{
+    display: flex;
+    align-items: center; /* Centrar verticalmente el footer */
+    justify-content: center; /* Centrar horizontalmente el footer */
+    position: relative;
+    flex-direction: column;
+    border-radius: 30px;
+}
+
+.contenedor-parrafos{
+    margin-top: 11%;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.parrafo{
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
+.formulario-contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px, 1px, 11px white;
+    border-radius: 20px;
+    padding: 0px;
+    width: 20%;
+    padding-right: 2%;
+
+    /*justify-content: center;
+    text-align: center;*/
+}
+
+#myForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.cont-info{
+    width: 100%;
+}
+
+.info-cliente{
+    border: 1px solid gold;
+    border-radius: 10px;
+    height: 40px;
+    width:100%;
+    padding:15px;
+    margin:0px;
+}
+
+.mensaje{
+    resize: vertical;
+    border: 1px solid gold;
+    border-radius: 10px;
+    height: 200px;
+    width:100%;
+    padding:15px;
+    margin-top:4%;
+}
+
+.contenedor-enviar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.botón{
+    border: 3px solid gold;
+    border-radius:10px;
+    min-height:20px 20px 20px 20px;
+    padding:10px 15px;
+    position: relative;
+    margin-left: 10%;
+}
+/* ------------------------------------------ FIN main seccion: CONTACTO -------------------------------------------------*/
+
+
+
+/* ------------------------------------------ Inicio Style seccion: CARTAS -------------------------------------------------*/
+/*Estilo del contenido*/
+.container {
+    display: grid;
+    grid-template: 1fr 360px 1fr;
+    grid-template-areas:
+        "header header"
+        "left contenido";
+    grid-gap: 5px;
+    padding: 10px;
+    margin: auto; /* Centrar el contenedor horizontal y verticalmente */
+    width: 650px; /* Ancho máximo del contenedor */
+    max-width: 90%; /* Establecer un ancho máximo del contenedor */
+    margin-top: 175px; /* Ajustar el margen superior para dejar espacio para el encabezado */
+    background-color: rgba(0, 0, 0, 0.6); /* Negro con 60% de opacidad */
+    border-radius: 10px;
+    color: white;
+}
+.item{
+    background-color: rgba(0, 0, 0, 0.6); /* Negro con 60% de opacidad */
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+}
+.header-container{
+    grid-area: header;
+    display: flex; /* Hacer que los elementos se alineen en una fila */
+    flex-direction: row; /* Alinear los elementos en una columna */
+    width: 650px;
+    height: 40px;
+}
+.left{
+    grid-area: left;
+    display: flex; /* Hacer que los elementos se alineen en una fila */
+    flex-direction: column; /* Alinear los elementos en una columna */
+    justify-content: center; /* Centrar verticalmente los elementos */
+    align-content: center; /* Tocando cod ajeno :)*/
+    width: 345;
+    height: 300px;
+}
+.contenido {
+    grid-area: contenido;
+    width: 285px;
+    height: 300px;
+    background-image: url(./img/Para_sacar_ico_final1.png);
+    background-size: contain; /* Ajusta la imagen al tamaño del contenedor manteniendo la relación de aspecto */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
+  }
+/*Fin estilo del contenido*/
+
+/*Estilo de cartas "left"*/
+
+.cartas {
+    background-color:  rgba(0, 0, 0, 0.8); /* Negro con 80% de opacidad */;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 128px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 2px; /* Separación entre elementos */
+    width: 80px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    display: flex; /* Utiliza flexbox para alinear el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
+.cartas:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Cambia el color de fondo al pasar el mouse */
+    color: black; /* Cambia el color del texto al pasar el mouse */
+}
+.header-cartas{
+    background-color: rgba(0, 0, 0, 0.8); /* Cambia el color de fondo al pasar el mouse */
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 67px;
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: 'Josefin Sans', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+.header-cartas:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Cambia el color de fondo al pasar el mouse */
+    color: black; /* Cambia el color del texto al pasar el mouse */
+}
+.activa {
+    background-color: rgb(255, 255, 255); /* Cambiar el fondo cuando está activo */
+    color: black; /* Cambiar el color del texto */
+}
+/*Fin estilo de cartas "left"*/
+
+/*Estilo de cartas "contenido"*/
+
+.carta-imagen {
+    margin: 0%;
+    display: flex;
+    margin-bottom: 5px; /* Margen inferior para separar del texto */
+    
+}
+.carta-imagen img {
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    height: 300px;
+    width: 280px;
+    margin-bottom: 0px; /* Margen inferior para separar del texto */
+    justify-content: left;
+    
+}
+.carta-texto {
+    font-family: 'Josefin Sans', sans-serif; /* Tipo de fuente */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-left: 10px; /* Margen izquierdo para separar del texto */
+    color: white; /* Color del texto */
+    text-align-last: right;
+}
+
+
+/*Fin estilo de cartas "contenido"*/
+
+/* ----------------------------------------------------------- Fin Style CARTAS -----------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------- INICIO FOOTER (COMPARTIDO) ---------------------------------------------------------*/
+footer{
+    background-color: rgba(250, 39, 39, 0.553);
+    color: whitesmoke;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.info-ubicación{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(250, 39, 39, 0.553); /* Color de fondo semi-transparente */
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+
+}
+.ubicación{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+.contenedor{
+    padding: 80px 0;
+}
+.contenedor-texto{
+    width: 40%;
+}
+.izquierda{
+    text-align: center;
+}
+.título{
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 35px;
+    margin-bottom: 30px ;
+}
+.ubicación .contenedor-texto{
+    width: 40%;
+}
+.redes-sociales{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+}
+.footer_social{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    
+}
+.derechos-reservados{
+    margin-top: 20px;
+}
+.whatsapp-btn{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    width: 50px;
+    height:50px;
+    border-radius: 60%;
+    background-color: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: opx 2px 0px rgba(0, 0, 0, 0.3);
+    animation: breathe 2s ease-in-out infinite;
+
+
+}
+/* -------------------------------------------------------- FIN FOOTER (COMPARTIDO)----------------------------------------------------------------*/
+
+
+/* Menú Desplegable =================================================== */
+.menu-desplegable{
+    position: absolute;
+    right: 2em;
+    top: 80px;
+    width: 300px;
+    height: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: none;
+}
+
+.menu-desplegable.open{
+    height: auto;
+}
+
+.menu-desplegable li{
+    padding: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-desplegable .btnLogin-popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--negro);
+    text-transform: capitalize;
+    font-size: 1em;
+    width: 50%;
+    margin: 0 auto 15px auto;
+}
+
+.menu-desplegable .btnLogin-popup:hover{
+    color: var(--blanco);
+}
+
+.menu-desplegable li:hover,
+.menu-desplegable li:active{
+    background-color: rgba(127, 127, 127, 0.4);
+    transition: 0.5s;
+}
+
+.menu-desplegable li a{
+    color: var(--gris-claro);
+    font-size: 1em;
+}
+/* FIN Menú Desplegable =================================================== */
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px){
+    /* Barra de Navegación */
+    .nav{
+        justify-content: flex-end;
+        gap: 40%;
+    }
+    
+    .navbar{
+        display: none;
+    }
+
+    .navtoggle{
+        display: block;
+    }
+
+    .menu-desplegable{
+        display: block;
+    }
+
+    .nav .btnLogin-popup{
+        display: none;
+    }
+
+    /* Inicio */
+    .content{
+        grid-column-end: 9;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        align-items: center;
+    }
+
+    .content h1{
+        font-size: 3em;
+    }
+
+    .content p{
+        font-size: 1.1em;
+    }
+
+    /* Nosotros */
+    .text h2 {
+        font-size: 24px; 
+    }
+
+    .parrafo p {
+        font-size: 16px;
+    }
+
+    .tarjetas-container .tarjeta p{
+        font-size: 1.2em;
+    }
+
+
+    /* dolar */
+    .dolar .container{
+        flex-direction: column;
+    }
+
+    .dolar .container h2{
+        font-size: 2.5em;
+        margin-bottom: 40px;
+    }
+
+    .tarjetas{
+        flex-wrap: wrap;
+    }
+
+    /* contacto */
+    .contact-us{
+        padding: 75px;
+        display: block;
+    }
+
+    .contact-us .title{
+        margin-bottom: 5%;
+    }
+
+    .box{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "form"
+        "info"
+        "map";
+    }
+
+    .input-box textarea{
+        min-height: 150px;
+    }
+
+    .map{
+        min-height: 300px;
+    }
+
+    /* Footer */
+    .footer-logo{
+        width: 40%;
+        padding-left: 40px;
+    }
+
+    .footer-col{
+        width: 40%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 768px){
+    /* Barra de Navegación */
+    .menu-desplegable{
+        left: 2em;
+        width: unset;
+    }
+    .slider-nav{
+        grid-column-end: auto;
+    }
+
+
+    /* Inicio */
+    .content.active{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Nosotros */
+    .text h2 {
+        font-size: 24px;
+    }
+
+    .parrafo p {
+        font-size: 16px;
+    }
+
+    .tarjetas-container .tarjeta i{
+        font-size: 2.5em;
+    }
+
+    .tarjetas-container .tarjeta p{
+        font-size: 1em;
+    }
+
+    /* Footer */
+    .footer-logo{
+        width: 40%;
+        padding-left: 40px;
+    }
+
+    .row{
+        justify-content: space-around;
+    }
+
+    .footer-col{
+        width: 40%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 576px){
+    /* inicio */
+    .content{
+        grid-column-end: 12;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        align-items: center;
+    }
+
+    .slider-nav{
+        grid-column-end: auto;
+    }
+
+    .wrapper{
+        width: 80%;
+        height: 70%;
+    }
+
+    .login h2{
+        font-size: 1.5em;
+        margin: 0 0 65px 0;
+    }
+
+    /* nosotros */
+    .nosotros .contenido h2{
+        font-size: 2em;
+    }
+
+    .nosotros .contenido {
+        padding: 0 20px;
+    }
+
+    .tarjetas-container{
+        padding: 40px 0;
+    }
+
+    /* dolar */
+    .dolar .container{
+        padding: 30px 0 30px 0;
+    }
+
+    .dolar .container h2{
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    /* contacto */
+
+    .contact-us{
+        padding: 40px 0;
+    }
+
+    .contact-us .title h2{
+        font-size: 1.2em;
+    }
+
+    /* footer */
+    .footer{
+        padding: 2em 0 1em;
+    }
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer-col{
+        padding: 0;
+    }
+
+    .footer-logo{
+        padding: 0;
+        margin-bottom: 2em;
+    }
+
+    .redes a:not(:last-child){
+        margin-right: 0.4em;
+    }
+}
