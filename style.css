@@ -392,6 +392,11 @@ main{
     position: relative;
     margin-left: 10%;
 }
+.iframe_contactos{
+    width:600%;
+    height:400px; 
+    border:0;
+}
 /* ------------------------------------------ FIN main seccion: CONTACTO -------------------------------------------------*/
 
 
