@@ -84,11 +84,52 @@ h1 a{
 
 nav {
     font-family: 'Josefin Sans', sans-serif;
-    margin-right: 3%; /* Ajuste del margen derecho */
+    margin-right: 1vw; /* Ajuste del margen derecho */
 }
 
-/* RESPONSIVE PARA PANTALLAS GRANDES */
-@media only screen and (min-width: 1024px) {
+/* RESPONSIVE PARA ESCRITORIO */
+@media (width >= 1024px) {
+    h1 {
+        font-size: 5vw;
+    }
+
+    .menu-icon { /* Oculta el icono de hamburguesa que es para pantallas medias*/
+        display: none;
+    }
+    .menu-horizontal { /* Acomoda el menu horizontal a la derecha */
+        display: flex;
+        justify-content: flex-end;
+    }
+    .menu-horizontal ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+    .menu-horizontal li{
+        margin-right: 20px;
+    }
+    .menu-horizontal a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.1vw;
+        padding: 25px 10px;
+        background-color: transparent;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .menu-horizontal a:hover, .menu-horizontal a.activa{
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .menu-desplegable{ /* Oculta el menu desplegable que es para pantallas medias*/
+        display: none;
+    }
+}
+
+/* RESPONSIVE PARA TABLETS */
+@media (width >= 750px) and (width <= 1024px) {
     
     .menu-icon { /* Oculta el icono de hamburguesa que es para pantallas medias*/
         display: none;
@@ -125,8 +166,8 @@ nav {
     }
 }
 
-/* RESPONSIVE PANTALLAS MEDIAS */
-@media only screen and (max-width: 1023px) {
+/* RESPONSIVE SMARTPHONE */
+@media (width <= 749px) {
     h1{
         font-size: 7vw;
     }
