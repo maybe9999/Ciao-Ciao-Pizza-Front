@@ -54,18 +54,24 @@ header img{ /* Ajusta las dimensiones del ICONO de la pagina para el header/cabe
 header {
     display: flex;
     align-items: center; /* Centrar verticalmente el header */
+    align-content: center;
+
     background-color: rgba(250, 39, 39, 0.553); /* Color de fondo semi-transparente */
     position: fixed; /* Fijar la posición del encabezado */
+
     top: 0; /* Fijar en la parte superior */
     left: 0; /* Fijar en la parte izquierda */
+
     width: 100%; /* Ocupar el ancho completo */
-    height: 11vh;
-    z-index: 1000;
+    height: 7vw;
+
+    z-index: 999;
+    flex-wrap: wrap;
 }
 
 h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 65px;
+    font-size: 6vw;
     margin-left: 20px;
     margin-right: auto; /* Empuja todo a la izquierda */
     color: white; /* Color del texto */
@@ -78,30 +84,102 @@ h1 a{
 
 nav {
     font-family: 'Josefin Sans', sans-serif;
-    margin-right: 100px; /* Ajuste del margen derecho */
+    margin-right: 3%; /* Ajuste del margen derecho */
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    padding: 25px 10px;
-    background-color: transparent; /* Fondo transparente */
-    border: 2px solid transparent; /* Borde transparente */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s, color 0.3s;
+/* RESPONSIVE PARA PANTALLAS GRANDES */
+@media only screen and (min-width: 1024px) {
+    
+    .menu-icon { /* Oculta el icono de hamburguesa que es para pantallas medias*/
+        display: none;
+    }
+    .menu-horizontal { /* Acomoda el menu horizontal a la derecha */
+        display: flex;
+        justify-content: flex-end;
+    }
+    .menu-horizontal ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+    .menu-horizontal li{
+        margin-right: 20px;
+    }
+    .menu-horizontal a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.3vw;
+        padding: 25px 10px;
+        background-color: transparent;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .menu-horizontal a:hover, .menu-horizontal a.activa{
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .menu-desplegable{ /* Oculta el menu desplegable que es para pantallas medias*/
+        display: none;
+    }
 }
 
-/* Fijar el color del fondo al seleccionar la pestaña*/
-nav a:hover,
-nav a.activa {
-    background-color: rgb(255, 255, 255); /* Cambiar el fondo al pasar el mouse o cuando está activo */
-    color: black;
+/* RESPONSIVE PANTALLAS MEDIAS */
+@media only screen and (max-width: 1023px) {
+    h1{
+        font-size: 7vw;
+    }
 
-}
-/* Fin de función "Activa"*/
-nav:not(:last-child) {
-    margin-right: 20px; /* Espaciado entre elementos de navegación */
+    .menu-desplegable{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width:100%;
+
+        background-color: #ff323288;
+        padding: 10px;
+        box-sizing: border-box;
+
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-desplegable.open{
+        display: flex !important;
+    }
+
+    .menu-desplegable ul{
+        display: flex;
+
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+
+        list-style: none;
+        padding: 0;
+    }
+    .menu-desplegable li{
+        padding: 0.7em;
+    }
+    .menu-desplegable a{
+        color: white;
+        font-size: 2.8vw;
+        text-decoration: none;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-horizontal{
+        display: none;
+    }
+    
 }
 
 
@@ -145,7 +223,7 @@ main{
 .imagen {
     border: 1px;
     margin-left: 5vh;
-    width: 40vh;
+    /*width: 40vh;*/
     justify-self: center;
     vertical-align: center;
 }
@@ -607,293 +685,3 @@ footer{
 /* -------------------------------------------------------- FIN FOOTER (COMPARTIDO)----------------------------------------------------------------*/
 
 
-/* Menú Desplegable =================================================== */
-.menu-desplegable{
-    position: absolute;
-    right: 2em;
-    top: 80px;
-    width: 300px;
-    height: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(15px);
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: none;
-}
-
-.menu-desplegable.open{
-    height: auto;
-}
-
-.menu-desplegable li{
-    padding: 0.7em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-desplegable .btnLogin-popup{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--negro);
-    text-transform: capitalize;
-    font-size: 1em;
-    width: 50%;
-    margin: 0 auto 15px auto;
-}
-
-.menu-desplegable .btnLogin-popup:hover{
-    color: var(--blanco);
-}
-
-.menu-desplegable li:hover,
-.menu-desplegable li:active{
-    background-color: rgba(127, 127, 127, 0.4);
-    transition: 0.5s;
-}
-
-.menu-desplegable li a{
-    color: var(--gris-claro);
-    font-size: 1em;
-}
-/* FIN Menú Desplegable =================================================== */
-
-/* RESPONSIVE DESIGN */
-@media(max-width: 992px){
-    /* Barra de Navegación */
-    .nav{
-        justify-content: flex-end;
-        gap: 40%;
-    }
-    
-    .navbar{
-        display: none;
-    }
-
-    .navtoggle{
-        display: block;
-    }
-
-    .menu-desplegable{
-        display: block;
-    }
-
-    .nav .btnLogin-popup{
-        display: none;
-    }
-
-    /* Inicio */
-    .content{
-        grid-column-end: 9;
-        grid-row-start: 3;
-        grid-row-end: 5;
-        align-items: center;
-    }
-
-    .content h1{
-        font-size: 3em;
-    }
-
-    .content p{
-        font-size: 1.1em;
-    }
-
-    /* Nosotros */
-    .text h2 {
-        font-size: 24px; 
-    }
-
-    .parrafo p {
-        font-size: 16px;
-    }
-
-    .tarjetas-container .tarjeta p{
-        font-size: 1.2em;
-    }
-
-
-    /* dolar */
-    .dolar .container{
-        flex-direction: column;
-    }
-
-    .dolar .container h2{
-        font-size: 2.5em;
-        margin-bottom: 40px;
-    }
-
-    .tarjetas{
-        flex-wrap: wrap;
-    }
-
-    /* contacto */
-    .contact-us{
-        padding: 75px;
-        display: block;
-    }
-
-    .contact-us .title{
-        margin-bottom: 5%;
-    }
-
-    .box{
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "form"
-        "info"
-        "map";
-    }
-
-    .input-box textarea{
-        min-height: 150px;
-    }
-
-    .map{
-        min-height: 300px;
-    }
-
-    /* Footer */
-    .footer-logo{
-        width: 40%;
-        padding-left: 40px;
-    }
-
-    .footer-col{
-        width: 40%;
-        margin-bottom: 30px;
-    }
-}
-
-@media(max-width: 768px){
-    /* Barra de Navegación */
-    .menu-desplegable{
-        left: 2em;
-        width: unset;
-    }
-    .slider-nav{
-        grid-column-end: auto;
-    }
-
-
-    /* Inicio */
-    .content.active{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    /* Nosotros */
-    .text h2 {
-        font-size: 24px;
-    }
-
-    .parrafo p {
-        font-size: 16px;
-    }
-
-    .tarjetas-container .tarjeta i{
-        font-size: 2.5em;
-    }
-
-    .tarjetas-container .tarjeta p{
-        font-size: 1em;
-    }
-
-    /* Footer */
-    .footer-logo{
-        width: 40%;
-        padding-left: 40px;
-    }
-
-    .row{
-        justify-content: space-around;
-    }
-
-    .footer-col{
-        width: 40%;
-        margin-bottom: 30px;
-    }
-}
-
-@media(max-width: 576px){
-    /* inicio */
-    .content{
-        grid-column-end: 12;
-        grid-row-start: 3;
-        grid-row-end: 5;
-        align-items: center;
-    }
-
-    .slider-nav{
-        grid-column-end: auto;
-    }
-
-    .wrapper{
-        width: 80%;
-        height: 70%;
-    }
-
-    .login h2{
-        font-size: 1.5em;
-        margin: 0 0 65px 0;
-    }
-
-    /* nosotros */
-    .nosotros .contenido h2{
-        font-size: 2em;
-    }
-
-    .nosotros .contenido {
-        padding: 0 20px;
-    }
-
-    .tarjetas-container{
-        padding: 40px 0;
-    }
-
-    /* dolar */
-    .dolar .container{
-        padding: 30px 0 30px 0;
-    }
-
-    .dolar .container h2{
-        font-size: 2em;
-        margin-bottom: 20px;
-    }
-
-    /* contacto */
-
-    .contact-us{
-        padding: 40px 0;
-    }
-
-    .contact-us .title h2{
-        font-size: 1.2em;
-    }
-
-    /* footer */
-    .footer{
-        padding: 2em 0 1em;
-    }
-    .footer-container{
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .footer-col{
-        padding: 0;
-    }
-
-    .footer-logo{
-        padding: 0;
-        margin-bottom: 2em;
-    }
-
-    .redes a:not(:last-child){
-        margin-right: 0.4em;
-    }
-}

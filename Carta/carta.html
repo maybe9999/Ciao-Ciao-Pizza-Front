@@ -10,14 +10,49 @@
 
 <body class="nuestra-carta">
     <header>
-        <img src="../img/Ico_ciao_negro.svg" alt="Ico pizzeria">
+        <img src="/img/Ico_ciao_negro.svg" alt="Ico pizzeria">
 
         <h1><a href="../index.html">Ciao Ciao Pizza</a></h1>
 
-        <nav><a href="../Nosotros/nosotros.html">NOSOTROS</a></nav> <!-- Lucas-->
-        <nav><a href="../Productos/productos.html">PRODUCTOS</a></nav> <!-- Matias-->
-        <nav><a class="activa" href="/Carta/carta.html">NUESTRA CARTA</a></nav><!-- Alexis-->
-        <nav><a href="../Contacto/contacto.html">CONTACTO</a></nav><!-- Marcia-->
+        <!-- Inicio Menu dispositivos con pantalla media-grande -->
+        <nav class="menu-horizontal">
+            <ul>
+                <li>
+                    <a href="/Nosotros/nosotros.html">NOSOTROS</a><!-- Lucas-->
+                </li>
+                <li>
+                    <a href="/Productos/productos.html">PRODUCTOS</a><!-- Matias-->
+                </li>
+                <li>
+                    <a class="activa" href="/Carta/carta.html">NUESTRA CARTA</a><!-- Alexis-->
+                </li>
+                <li>
+                    <a href="/Contacto/contacto.html">CONTACTO</a><!-- Marcia-->
+                </li>
+            </ul>
+        </nav>    
+        <!-- Fin Menu dispositivos con pantalla media-grande -->
+
+        <!-- Inicio Menu dispositivos con pantalla chica -->
+        <img src="/img/bars-solid.svg" alt="Menú" class="menu-icon">
+        <nav class="menu-desplegable" >
+            <ul>
+                <li>
+                    <a href="/Nosotros/nosotros.html">NOSOTROS</a><!-- Lucas-->
+                </li>
+                <li>
+                    <a href="/Productos/productos.html">PRODUCTOS</a><!-- Matias-->
+                </li>
+                <li>
+                    <a href="/Carta/carta.html">NUESTRA CARTA</a><!-- Alexis-->
+                </li>
+                <li>
+                    <a href="/Contacto/contacto.html">CONTACTO</a><!-- Marcia-->
+                </li>
+            </ul>
+        </nav>
+        <!-- Fin Menu dispositivos con pantalla chica -->
+        
     </header>
 
     <main>
@@ -61,7 +96,6 @@
         </div>
     </main>
     
-    <script src="../javascript.js"></script>
     <footer>     
         <div class="footer_social">
             <p class="derechos-reservados">
@@ -70,6 +104,8 @@
         </div>
     </footer>
     <!--FIN DEL FOOTER-->
+
+    <script src="../javascript.js"></script>
 
     <!--CREACION DEL BOTÓN WHATSAPP-->
     <a href="https://api.whatsapp.com/send?phone=+5493436611200&amp;text=%2AHola+Rotiser%C3%ADa+Do%C3%B1a+Lita%2A+%F0%9F%98%83%0A%0ATe+escribo+desde+la+web%2C+quisiera+realizar+un+pedido+%F0%9F%A4%A9%0A%0APodes+contactarte+conmigo+a+este+n%C3%BAmero." target="_blank" class="whatsapp-btn">

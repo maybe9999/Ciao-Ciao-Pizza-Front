@@ -83,3 +83,17 @@ function init() {
 }
 document.addEventListener("DOMContentLoaded", init);
 // Fin JavaScriptContacto -----------------//
+
+
+//Responsive HEADEER---------------------------------------------//
+document.addEventListener("DOMContentLoaded", function()
+{
+    let menuIcon = document.querySelector(".menu-icon");
+    let menuDesplegable = document.querySelector(".menu-desplegable");
+
+    menuIcon.addEventListener("click", function(){
+        menuDesplegable.classList.toggle("open");
+    });
+
+});
+//FIN Responsive HEADEER--------------------------------------------- //
