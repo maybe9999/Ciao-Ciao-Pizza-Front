@@ -87,141 +87,7 @@ nav {
     margin-right: 1vw; /* Ajuste del margen derecho */
 }
 
-/* RESPONSIVE PARA ESCRITORIO */
-@media (width >= 1024px) {
-    h1 {
-        font-size: 5vw;
-    }
 
-    .menu-icon { /* Oculta el icono de hamburguesa que es para pantallas medias*/
-        display: none;
-    }
-    .menu-horizontal { /* Acomoda el menu horizontal a la derecha */
-        display: flex;
-        justify-content: flex-end;
-    }
-    .menu-horizontal ul{
-        display: flex;
-        list-style: none;
-        padding: 0;
-    }
-    .menu-horizontal li{
-        margin-right: 20px;
-    }
-    .menu-horizontal a{
-        color: white;
-        text-decoration: none;
-        font-size: 1.1vw;
-        padding: 25px 10px;
-        background-color: transparent;
-        border: 2px solid transparent;
-        border-radius: 5px;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    .menu-horizontal a:hover, .menu-horizontal a.activa{
-        background-color: rgb(255, 255, 255);
-        color: black;
-    }
-
-    .menu-desplegable{ /* Oculta el menu desplegable que es para pantallas medias*/
-        display: none;
-    }
-}
-
-/* RESPONSIVE PARA TABLETS */
-@media (width >= 750px) and (width <= 1024px) {
-    
-    .menu-icon { /* Oculta el icono de hamburguesa que es para pantallas medias*/
-        display: none;
-    }
-    .menu-horizontal { /* Acomoda el menu horizontal a la derecha */
-        display: flex;
-        justify-content: flex-end;
-    }
-    .menu-horizontal ul{
-        display: flex;
-        list-style: none;
-        padding: 0;
-    }
-    .menu-horizontal li{
-        margin-right: 20px;
-    }
-    .menu-horizontal a{
-        color: white;
-        text-decoration: none;
-        font-size: 1.3vw;
-        padding: 25px 10px;
-        background-color: transparent;
-        border: 2px solid transparent;
-        border-radius: 5px;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    .menu-horizontal a:hover, .menu-horizontal a.activa{
-        background-color: rgb(255, 255, 255);
-        color: black;
-    }
-
-    .menu-desplegable{ /* Oculta el menu desplegable que es para pantallas medias*/
-        display: none;
-    }
-}
-
-/* RESPONSIVE SMARTPHONE */
-@media (width <= 749px) {
-    h1{
-        font-size: 7vw;
-    }
-
-    .menu-desplegable{
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width:100%;
-
-        background-color: #ff323288;
-        padding: 10px;
-        box-sizing: border-box;
-
-        justify-content: center;
-        justify-items: center;
-        flex-wrap: wrap;
-    }
-
-    .menu-desplegable.open{
-        display: flex !important;
-    }
-
-    .menu-desplegable ul{
-        display: flex;
-
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        justify-content: center;
-        justify-items: center;
-
-        list-style: none;
-        padding: 0;
-    }
-    .menu-desplegable li{
-        padding: 0.7em;
-    }
-    .menu-desplegable a{
-        color: white;
-        font-size: 2.8vw;
-        text-decoration: none;
-    }
-
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-    .menu-horizontal{
-        display: none;
-    }
-    
-}
 
 
 /* ---------------------------------------------- Fin Header (Cabecera) - (COMPARTIDO)--------------------------------------------------*/
@@ -239,6 +105,9 @@ main{
     margin-right: 10px;
     padding-top: 350px;   
 }
+h2{
+    text-align: center;
+}
 /* ------------------------------------------ Fin main, seccion: INICIO -------------------------------------------------*/
 
 
@@ -253,23 +122,23 @@ main{
 
 .conteiner {
     background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-
+    width: 300%;
+    overflow: scroll;
+   
     margin-top: 6vh;
     display: flex;
-    align-items: center;
-    justify-content: start;
+    justify-content: left;
+    grid-template-areas: "image" "text";
 }
 
 .imagen {
     border: 1px;
-    margin-left: 5vh;
-    /*width: 40vh;*/
-    justify-self: center;
+    width: 110vh;
     vertical-align: center;
 }
 
 .texto {
+    position: sticky;
     border: 1px;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
@@ -726,3 +595,237 @@ footer{
 /* -------------------------------------------------------- FIN FOOTER (COMPARTIDO)----------------------------------------------------------------*/
 
 
+/* RESPONSIVE PARA ESCRITORIO */
+@media (width >= 1024px) {
+    h1 {
+        font-size: 5vw;
+    }
+
+    .menu-icon { /* Oculta el icono de hamburguesa que es para pantallas medias*/
+        display: none;
+    }
+    .menu-horizontal { /* Acomoda el menu horizontal a la derecha */
+        display: flex;
+        justify-content: flex-end;
+    }
+    .menu-horizontal ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+    .menu-horizontal li{
+        margin-right: 20px;
+    }
+    .menu-horizontal a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.1vw;
+        padding: 25px 10px;
+        background-color: transparent;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .menu-horizontal a:hover, .menu-horizontal a.activa{
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .menu-desplegable{ /* Oculta el menu desplegable que es para pantallas medias*/
+        display: none;
+    }
+    
+.conteiner {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.imagen {
+    border: 1px;
+    justify-self: center;
+    vertical-align: center;
+}
+
+.texto {
+    border: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vh;
+    color: white;
+    text-align: justify;
+    width: 100vh;
+    justify-self: center;
+    align-self: center;
+    padding: 4vh;
+}
+
+
+/* ------------------------------------------ Fin main seccion: NOSOTROS -------------------------------------------------*/
+
+}
+
+  
+
+
+
+
+/* RESPONSIVE PARA TABLETS */
+@media (width >= 750px) and (width <= 1024px) {
+    
+    .menu-icon { /* Oculta el icono de hamburguesa que es para pantallas medias*/
+        display: none;
+    }
+    .menu-horizontal { /* Acomoda el menu horizontal a la derecha */
+        display: flex;
+        justify-content: flex-end;
+    }
+    .menu-horizontal ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+    .menu-horizontal li{
+        margin-right: 20px;
+    }
+    .menu-horizontal a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.3vw;
+        padding: 25px 10px;
+        background-color: transparent;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .menu-horizontal a:hover, .menu-horizontal a.activa{
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .menu-desplegable{ /* Oculta el menu desplegable que es para pantallas medias*/
+        display: none;
+    }
+    .conteiner {
+        display: grid;
+        grid-template-areas:"image" "text";
+        overflow: scroll;
+        max-height: 100vh;
+    }
+    .imagen{
+        position: relative;
+    }
+    .imagen img{
+        
+        width: 110vh;
+        
+    }
+    .text{
+       padding: 20px 10px;
+       display: grid;
+       grid-template-rows: auto 1fr 50px;
+       grid-row-gap: 15px;
+       grid-area: text;
+       position: sticky;
+       text-align: center;
+       z-index: 1;
+       width: 100px;
+       
+    }
+   
+    
+}
+
+/* RESPONSIVE SMARTPHONE */
+@media (width <= 749px) {
+    h1{
+        font-size: 7vw;
+    }
+
+    .menu-desplegable{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width:100%;
+
+        background-color: #ff323288;
+        padding: 10px;
+        box-sizing: border-box;
+
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-desplegable.open{
+        display: flex !important;
+    }
+
+    .menu-desplegable ul{
+        display: flex;
+
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+
+        list-style: none;
+        padding: 0;
+    }
+    .menu-desplegable li{
+        padding: 0.7em;
+    }
+    .menu-desplegable a{
+        color: white;
+        font-size: 2.8vw;
+        text-decoration: none;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-horizontal{
+        display: none;
+    }
+}
+.conteiner {
+    display: grid;
+    grid-template-areas:"image" "text";
+    overflow: scroll;
+    max-height: 100vh;
+}
+.imagen{
+    position: relative;
+}
+.imagen img{
+    
+    width: 110vh;
+    
+}
+.text{
+   padding: 20px 10px;
+   display: grid;
+   grid-template-rows: auto 1fr 50px;
+   grid-row-gap: 15px;
+   grid-area: text;
+   position: sticky;
+   text-align: center;
+   z-index: 1;
+   width: 100px;
+   
+}
+
+
+
+
+
+    
