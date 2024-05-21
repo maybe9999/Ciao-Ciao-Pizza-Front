@@ -611,6 +611,35 @@ footer{
     }
     /* FIN RESPONSIVE HEADER */
 
+    /* INICIO RESPONSIVE INDEX*/
+    .main_index{
+        display: flex;
+        justify-content: flex-start;
+        justify-items: flex-start;
+        
+        align-content: center;
+        align-items: center;
+
+    }
+    .text {
+        display: flex;
+
+        justify-content: flex-start;
+        justify-items: flex-start;
+
+        align-content: center;
+        align-items: center;
+
+        margin-left: 4%;
+ 
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .text h2{
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 6vw;
+    }
+    /* FIN RESPONSIVE INDEX*/
+
     /* INICIO RESPONSIVE NOSOTROS*/
     .main_nosotros{
         display: flex;
@@ -698,6 +727,35 @@ footer{
         display: none;
     }
     /* FIN RESPONSIVE HEADER */
+
+    /* INICIO RESPONSIVE INDEX*/
+    .main_index{
+        display: flex;
+        justify-content: flex-start;
+        justify-items: flex-start;
+        
+        align-content: center;
+        align-items: center;
+
+    }
+    .text {
+        display: flex;
+
+        justify-content: flex-start;
+        justify-items: flex-start;
+
+        align-content: center;
+        align-items: center;
+
+        margin-left: 4%;
+ 
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .text h2{
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 8vw;
+    }
+    /* FIN RESPONSIVE INDEX*/
 
     /* INICIO RESPONSIVE NOSOTROS */
     .conteiner {
@@ -853,6 +911,7 @@ footer{
 }
 /* ----------------------------------------- FIN RESPONSIVE SMARTPHONE ----------------------------------------- */
 
+
 /* ----------------------------------------- INICIO RESPONSIVE SMARTPHONE CHICO ----------------------------------------- */
 @media (width <= 450px) {
     /* INICIO RESPONSIVE HEADER*/
@@ -905,7 +964,7 @@ footer{
     }
     .menu-desplegable a{
         color: white;
-        font-size: 5vw;
+        font-size: 4.6vw;
         text-decoration: none;
     }
 
@@ -913,6 +972,8 @@ footer{
         display: block;
         cursor: pointer;
         margin-right: 2%;
+        height: 60%;
+        width: 10%;
     }
     .menu-horizontal{ /* OCULTA EL MENU HORIZONTAL*/
         display: none;
