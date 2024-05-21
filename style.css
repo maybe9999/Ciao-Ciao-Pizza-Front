@@ -86,10 +86,6 @@ nav {
     font-family: 'Josefin Sans', sans-serif;
     margin-right: 1vw; /* Ajuste del margen derecho */
 }
-
-
-
-
 /* ---------------------------------------------- Fin Header (Cabecera) - (COMPARTIDO)--------------------------------------------------*/
 
 
@@ -152,13 +148,10 @@ h2{
     align-self: center;
     padding: 4vh;
 }
-
-
 /* ------------------------------------------ Fin main seccion: NOSOTROS -------------------------------------------------*/
 
 
 /* ---------------------------------------------------------- Inicio main seccion: PRODUCTOS  -------------------------------------------------------*/
-
 /*  ----------    PORTADA  PRODUCTOS  ---------- */
 .img_y_text{  /* FOTO DE INICIO */
     display: flex;
@@ -179,11 +172,9 @@ h2{
 
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, 19px 23px 13px rgba(206,89,55,0.5);
   }
-
 /*  ----------   FIN PORTADA    ---------- */
 
 /*  ----------    PIZZAS Y OTROS PRODUCTOS    ---------- */
-
 .pizzas{ /* SECCION PIZZAS (ES LO MISMO QUE .PAPAS*/
     display: flex;
     justify-content:space-evenly;
@@ -284,10 +275,11 @@ h2{
     opacity: 1;
 }
 
-.tamaño:hover .R_img{ /* AGRANDA LAS FOTOS Y LE QUITA BRILLO PASAR POR ENCIMA*/
+.tamaño:hover .R_img{ /* AGRANDA LAS FOTOS Y LE QUITA BRILLO AL PASAR POR ENCIMA*/
     transform: scale(1.15); /* agrandar la imagen un 10% */
     filter:brightness(75%); /* REDUCE EL BRILLO*/
 }
+/*  ----------   FIN PIZZAS Y OTROS PRODUCTOS    ---------- */
 
 /* ------------------------------------------------------------------ FIN MAIN seccion: PRODUCTOS  -------------------------------------------------------*/
 
@@ -387,8 +379,6 @@ h2{
 }
 /* ------------------------------------------ FIN main seccion: CONTACTO -------------------------------------------------*/
 
-
-
 /* ------------------------------------------ Inicio Style seccion: CARTAS -------------------------------------------------*/
 /*Estilo del contenido*/
 .container {
@@ -441,7 +431,6 @@ h2{
 /*Fin estilo del contenido*/
 
 /*Estilo de cartas "left"*/
-
 .cartas {
     background-color:  rgba(0, 0, 0, 0.8); /* Negro con 80% de opacidad */;
     border: 2px solid transparent;
@@ -505,12 +494,8 @@ h2{
     color: white; /* Color del texto */
     text-align-last: right;
 }
-
-
 /*Fin estilo de cartas "contenido"*/
-
 /* ----------------------------------------------------------- Fin Style CARTAS -----------------------------------------------------------*/
-
 
 
 /* ------------------------------------------------------------------- INICIO FOOTER (COMPARTIDO) ---------------------------------------------------------*/
@@ -595,13 +580,13 @@ footer{
 /* -------------------------------------------------------- FIN FOOTER (COMPARTIDO)----------------------------------------------------------------*/
 
 
-<<<<<<< HEAD
-/* RESPONSIVE PARA ESCRITORIO */
+
+/* ----------------------------------------- INICIO RESPONSIVE PARA ESCRITORIO -------------------------------------------*/
 @media (width >= 1024px) {
+    /* INICIO RESPONSIVE HEADER */
     h1 {
         font-size: 5vw;
     }
-
     .menu-icon { /* Oculta el icono de hamburguesa que es para pantallas medias*/
         display: none;
     }
@@ -642,7 +627,9 @@ footer{
         justify-content: center;
         width: 100%;
     }
-    
+    /* FIN RESPONSIVE HEADER */
+
+    /* INICIO RESPONSIVE NOSOTROS*/
     .conteiner {
         background-color: rgba(0, 0, 0, 0.6);
         width: 100%;
@@ -674,20 +661,15 @@ footer{
         align-self: center;
         padding: 4vh;
     }
-
-
-/* ------------------------------------------ Fin main seccion: NOSOTROS -------------------------------------------------*/
-
+    /* FIN RESPONSIVE NOSOTROS*/
 }
-
-  
-
+/* ----------------------------------------- FIN RESPONSIVE PARA ESCRITORIO -------------------------------------------*/
 
 
 
-/* RESPONSIVE PARA TABLETS */
+/* ----------------------------------------- INICIO RESPONSIVE PARA TABLETS -------------------------------------------*/
 @media (width >= 750px) and (width <= 1024px) {
-    
+    /* INICIO RESPONSIVE HEADER */
     .menu-icon { /* Oculta el icono de hamburguesa que es para pantallas medias*/
         display: none;
     }
@@ -721,6 +703,9 @@ footer{
     .menu-desplegable{ /* Oculta el menu desplegable que es para pantallas medias*/
         display: none;
     }
+    /* FIN RESPONSIVE HEADER */
+
+    /* INICIO RESPONSIVE NOSOTROS */
     .conteiner {
         display: grid;
         grid-template-areas:"image" "text";
@@ -731,9 +716,7 @@ footer{
         position: relative;
     }
     .imagen img{
-        
         width: 110vh;
-        
     }
     .text{
        padding: 20px 10px;
@@ -747,12 +730,15 @@ footer{
        width: 100px;
        
     }
-   
-    
+    /* FIN RESPONSIVE NOSOTROS */
 }
+/* ----------------------------------------- FIN RESPONSIVE PARA TABLETS -------------------------------------------*/
 
-/* RESPONSIVE SMARTPHONE */
+
+
+/* ----------------------------------------- INICIO RESPONSIVE SMARTPHONE ----------------------------------------- */
 @media (width <= 749px) {
+    /*INICIO RESPONSIVE HEADER*/
     h1{
         font-size: 7vw;
     }
@@ -805,7 +791,9 @@ footer{
     .menu-horizontal{
         display: none;
     }
+    /*FIN RESPONSIVE HEADER*/
 
+    /*INICIO RESPONSIVE NOSOTROS*/
     .conteiner {
         display: grid;
         grid-template-areas:"image" "text";
@@ -830,8 +818,10 @@ footer{
     text-align: center;
     z-index: 1;
     width: 100px;
-    
-=======
+    }
+    /*FIN RESPONSIVE NOSOTROS*/
+}
+/* ----------------------------------------- FIN RESPONSIVE SMARTPHONE ----------------------------------------- */
 
 
 
@@ -843,11 +833,15 @@ footer{
 
 
 
-/*                  Lo que                    */
 
-/* RESPONSIVE DESIGN */
+
+
+/*                  ESTO SECCIÓN YA ESTABA... LA COMENTE POR QUE HAY UNA PARTE QUE ENTRA EN CONFLICTO/PISA 
+                    EL HEAEDER, SI HAY ALGO QUE USTEDES PROGRAMARON ACÁ AGRÉGUENLO ARRIBA                    /
+
+/* RESPONSIVE DESIGN /
 @media(max-width: 992px){
-    /* Barra de Navegación */
+    /* Barra de Navegación /
     .nav{
         justify-content: flex-end;
         gap: 40%;
@@ -869,7 +863,7 @@ footer{
         display: none;
     }
 
-    /* Inicio */
+    /* Inicio /
     .content{
         grid-column-end: 9;
         grid-row-start: 3;
@@ -885,7 +879,7 @@ footer{
         font-size: 1.1em;
     }
 
-    /* Nosotros */
+    /* Nosotros/
     .text h2 {
         font-size: 24px; 
     }
@@ -899,7 +893,7 @@ footer{
     }
 
 
-    /* dolar */
+    /* dolar /
     .dolar .container{
         flex-direction: column;
     }
@@ -913,7 +907,7 @@ footer{
         flex-wrap: wrap;
     }
 
-    /* contacto */
+    /* contacto /
     .contact-us{
         padding: 75px;
         display: block;
@@ -942,7 +936,7 @@ footer{
         min-height: 300px;
     }
 
-    /* Footer */
+    /* Footer /
     .footer-logo{
         width: 40%;
         padding-left: 40px;
@@ -955,7 +949,7 @@ footer{
 }
 
 @media(max-width: 768px){
-    /* Barra de Navegación */
+    /* Barra de Navegación /
     .menu-desplegable{
         left: 2em;
         width: unset;
@@ -965,13 +959,13 @@ footer{
     }
 
 
-    /* Inicio */
+    /* Inicio /
     .content.active{
         display: flex;
         justify-content: space-between;
     }
 
-    /* Nosotros */
+    /* Nosotros /
     .text h2 {
         font-size: 24px;
     }
@@ -988,7 +982,7 @@ footer{
         font-size: 1em;
     }
 
-    /* Footer */
+    /* Footer /
     .footer-logo{
         width: 40%;
         padding-left: 40px;
@@ -1002,10 +996,11 @@ footer{
         width: 40%;
         margin-bottom: 30px;
     }
+    /*FIN NOSOTROS/
 }
 
 @media(max-width: 576px){
-    /* inicio */
+    /* inicio /
     .content{
         grid-column-end: 12;
         grid-row-start: 3;
@@ -1027,7 +1022,7 @@ footer{
         margin: 0 0 65px 0;
     }
 
-    /* nosotros */
+    /* nosotros /
     .nosotros .contenido h2{
         font-size: 2em;
     }
@@ -1040,7 +1035,7 @@ footer{
         padding: 40px 0;
     }
 
-    /* dolar */
+    /* dolar /
     .dolar .container{
         padding: 30px 0 30px 0;
     }
@@ -1050,7 +1045,7 @@ footer{
         margin-bottom: 20px;
     }
 
-    /* contacto */
+    /* contacto /
 
     .contact-us{
         padding: 40px 0;
@@ -1060,7 +1055,7 @@ footer{
         font-size: 1.2em;
     }
 
-    /* footer */
+    /* footer /
     .footer{
         padding: 2em 0 1em;
     }
@@ -1081,14 +1076,7 @@ footer{
 
     .redes a:not(:last-child){
         margin-right: 0.4em;
->>>>>>> 26ac5ceb040917bf65324c54af80cf9f7bcdbdc6
+
     }
 }
-
-
-<<<<<<< HEAD
-
-
-        
-=======
->>>>>>> 26ac5ceb040917bf65324c54af80cf9f7bcdbdc6
+*/
