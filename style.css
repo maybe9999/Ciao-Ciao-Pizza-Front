@@ -772,10 +772,34 @@ footer{
         width: 35vh;
         height: 55vh;
     }
-    .texto{
+    
+    /* FIN RESPONSIVE NOSOTROS */
+    /*INICIO RESPONSIVE CONTACTO*/
+    .contenedor-parrafos{
+        margin-top: 5%;
+        font-size: 25px;
+    }
+    .parrafo{
+        font-size: 25px;
+    }
+    
+    .formulario-contacto{
+    width: 50%;
+   
+    
+}
+    
+    #myForm{
+        width: 50%;
        
     }
-    /* FIN RESPONSIVE NOSOTROS */
+    /* INICIO RESPONSIVE FOOTER DE CONTACTO*/
+    .izquierda{
+        text-align: end;
+    }
+    .parrafo{
+        text-align: end;
+    }
 }
 /* ----------------------------------------- FIN RESPONSIVE PARA TABLETS -------------------------------------------*/
 
@@ -908,7 +932,49 @@ footer{
         font-size: 3vw;
     }
     /* FIN RESPONSIVE PRODUCTOS */
+    /*INICIO RESPONSIVE DE CONTACTO Y FOOTER*/
+    /*INICIO RESPONSIVE CONTACTO*/
+    .contenedor-parrafos{
+        margin-top: 5%;
+        font-size: 25px;
+        /*padding-bottom: 0px;
+        margin-bottom: 0px;*/
+    }
+    .parrafo{
+        font-size: 25px;
+    }
+    
+    .formulario-contacto{
+    width: 50%;
+   
+    
 }
+    
+    #myForm{
+        width: 50%;
+       
+    }
+    /* INICIO RESPONSIVE FOOTER DE CONTACTO*/
+   
+    .contenedor-parrafos {
+        margin-top: 3%; /* Reducir el margen en dispositivos móviles */
+        font-size: 20px; /* Reducir el tamaño de fuente en dispositivos móviles */
+    }
+
+    .parrafo {
+        font-size: 20px; /* Reducir el tamaño de fuente en dispositivos móviles */
+    }
+
+    .formulario-contacto, #myForm {
+        width: 90%; /* Ajustar el ancho para que sea más estrecho en dispositivos móviles */
+        margin: 0 auto; /* Centrar el formulario en dispositivos móviles */
+    }
+
+    .izquierda, .parrafo {
+        text-align: center; /* Centrar el texto en dispositivos móviles */
+    }
+}
+
 /* ----------------------------------------- FIN RESPONSIVE SMARTPHONE ----------------------------------------- */
 
 
@@ -1045,6 +1111,24 @@ footer{
         font-size: 4vw;
     }
     /* FIN RESPONSIVE PRODUCTOS */
+    /*INICIO RESPONSIVE PARA ANTALLAS MAS PEQUEÑAS DE CONTACTO Y FOOTER*/
+    /* Estilos para dispositivos móviles */
+    .contenedor-parrafos {
+        margin-top: 2%; /* Reducir aún más el margen en pantallas muy pequeñas */
+        font-size: 18px; /* Reducir el tamaño de fuente en pantallas muy pequeñas */
+    }
+
+    .parrafo {
+        font-size: 18px; /* Reducir el tamaño de fuente en pantallas muy pequeñas */
+    }
+
+    .formulario-contacto, #myForm {
+        width: 50%; /* Ajustar el ancho para que sea más estrecho en pantallas muy pequeñas */
+    }
+
+    .izquierda, .parrafo {
+        text-align: center; /* Centrar el texto en pantallas muy pequeñas */
+    }
 }
 /* ----------------------------------------- FIN RESPONSIVE SMARTPHONE CHICO ----------------------------------------- */
 
