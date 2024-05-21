@@ -784,13 +784,13 @@ footer{
     }
     
     .formulario-contacto{
-    width: 50%;
+    width: 300px;
    
     
 }
     
     #myForm{
-        width: 50%;
+        width: 300px;
        
     }
     /* INICIO RESPONSIVE FOOTER DE CONTACTO*/
@@ -966,7 +966,7 @@ footer{
     }
 
     .formulario-contacto, #myForm {
-        width: 70%; /* Ajustar el ancho para que sea más estrecho en dispositivos móviles */
+        width: 300px; /* Ajustar el ancho para que sea más estrecho en dispositivos móviles */
         margin: 0 auto; /* Centrar el formulario en dispositivos móviles */
     }
 
