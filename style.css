@@ -125,7 +125,7 @@ h2{
 
 .imagen {
     border: 1px;
-    width: 110vh;
+    /*width: 110vh;*/
     vertical-align: center;
 }
 
@@ -609,6 +609,9 @@ footer{
     .menu-desplegable{ /* Oculta el menu desplegable que es para pantallas medias*/
         display: none;
     }
+    /* FIN RESPONSIVE HEADER */
+
+    /* INICIO RESPONSIVE NOSOTROS*/
     .main_nosotros{
         display: flex;
         align-content: center;
@@ -616,9 +619,6 @@ footer{
         justify-content: center;
         width: 100%;
     }
-    /* FIN RESPONSIVE HEADER */
-
-    /* INICIO RESPONSIVE NOSOTROS*/
     .conteiner {
         background-color: rgba(0, 0, 0, 0.6);
         width: 100%;
@@ -627,18 +627,18 @@ footer{
 
         display: flex;
         align-items: center;
-        justify-content: center;
         justify-items: center;
+        justify-content: space-around;
     }
 
     .imagen {
         border: 1px;
         justify-self: center;
         vertical-align: center;
-        width: 100vh;
+        /* width: 100vh; */
     }
 
-    .texto {
+    .texto{
         border: 1px;
         background-color: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(5px);
@@ -649,7 +649,7 @@ footer{
 
         color: white;
 
-        width: 100vh;
+        /*width: 100vh;*/
         padding: 4vh;
 
         justify-self: center;
@@ -701,27 +701,20 @@ footer{
 
     /* INICIO RESPONSIVE NOSOTROS */
     .conteiner {
-        display: grid;
-        grid-template-areas:"image" "text";
-        overflow: scroll;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
         max-height: 100vh;
     }
     .imagen{
         position: relative;
     }
     .imagen img{
-        width: 110vh;
+        width: 35vh;
+        height: 55vh;
     }
-    .text{
-       padding: 20px 10px;
-       display: grid;
-       grid-template-rows: auto 1fr 50px;
-       grid-row-gap: 15px;
-       grid-area: text;
-       position: sticky;
-       text-align: center;
-       z-index: 1;
-       width: 100px;
+    .texto{
        
     }
     /* FIN RESPONSIVE NOSOTROS */
@@ -793,31 +786,29 @@ footer{
     /*FIN RESPONSIVE HEADER*/
 
     /*INICIO RESPONSIVE NOSOTROS*/
+    body.nosotros{
+        height: 100%;
+        background-repeat: repeat;
+    }
     .conteiner {
-        display: grid;
-        grid-template-areas:"image" "text";
-        
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
         max-height: 100vh;
     }
     .imagen{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
         position: relative;
     }
     .imagen img{
-        
-        width: 110vh;
-        
+        width: 20%;
+        height: 100%;
     }
-    .text{
-        padding: 20px 10px;
-        display: grid;
-        overflow: scroll;
-        grid-template-rows: auto 1fr 50px;
-        grid-row-gap: 15px;
-        grid-area: text;
-        position: sticky;
-        text-align: center;
-        z-index: 1;
-        width: 100px;
+    .texto{
+        width: 90%;
     }
     /*FIN RESPONSIVE NOSOTROS*/
 
@@ -928,6 +919,32 @@ footer{
     }
     /* FIN RESPONSIVE HEADER*/
 
+    /*INICIO RESPONSIVE NOSOTROS*/
+    body.nosotros{
+        height: 100%;
+        background-repeat: repeat;
+    }
+    .conteiner {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
+        max-height: 100vh;
+    }
+    .imagen{
+        display: none;
+        justify-content: center;
+        justify-self: center;
+        position: relative;
+    }
+    .imagen img{
+        width: 20%;
+        height: 100%;
+    }
+    .texto{
+        width: 90%;
+    }
+    /*FIN RESPONSIVE NOSOTROS*/
 
     /* INICIO RESPONSIVE PRODUCTOS */
     .text_prin { /* TEXTO DE FOTO DE INICIO*/
