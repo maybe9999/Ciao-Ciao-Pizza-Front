@@ -3,8 +3,6 @@
 
 /* ------------------------------------ General ---------------------------------------------*/
 
-
-
 body{ /* Propiedades de todos los body*/
     margin: 0;
     padding: 0;
@@ -39,8 +37,6 @@ body.productos .main_prod .img_y_text{
     background-image: url('./img/portada_productos_11zon.webp');
 }
 /* ------------------------------------ Fin General ---------------------------------------------*/
-
-
 
 
 /* ------------------------------------------------- Inicio Header (Cabecera) - (Compartido) ----------------------------------------------*/
