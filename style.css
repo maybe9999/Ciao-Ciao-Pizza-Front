@@ -176,7 +176,7 @@ h2{
 /*  ----------   FIN PORTADA    ---------- */
 
 /*  ----------    PIZZAS Y OTROS PRODUCTOS    ---------- */
-.pizzas{ /* SECCIÓN PIZZAS (ES LO MISMO QUE .PAPAS*/
+.pizzas, .papas{ /* SECCIÓN PIZZAS (ES LO MISMO QUE .PAPAS*/
     display: flex;
 
     justify-content: space-evenly;
@@ -189,21 +189,6 @@ h2{
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 3%;
-    background-color: white !important;
-}
-.papas{
-    display: flex;
-
-    justify-content:space-evenly;
-    align-items: flex-start;
-
-    flex-wrap: wrap;
-
-    margin-top: 2%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 3%;
-
     background-color: white !important;
 }
 
@@ -222,7 +207,7 @@ h2{
     text-shadow: 4px 3px 0 #7a7a7a63;   
 }
 
-.tamaño { /* CONTENEDOR DE FOTO Y TEXTO DE FOTO (.R_IMG Y .PARR)*/
+.tamaño { /* CONTENEDOR PRODUCTOS (FOTO Y TEXTO DE FOTO) (.R_IMG Y .PARR)*/
     position: relative;
 
     margin: 2%;
@@ -237,7 +222,7 @@ h2{
     
 }
 
-.R_img {
+.R_img { /* IMAGEN DE PRODUCTO (PIZZA PAPA ETC)*/
     width: 100%;
     height: 100%;
 
@@ -248,7 +233,7 @@ h2{
     transition: transform 0.5s, filter 0.5s;
 }
 
-.parr{
+.parr{ /* DESCRIPCIÓN/TEXTO DE PRODUCTO (PIZZA PAPA ETC)*/
     position: absolute;
     padding: 10px;
     border-radius: 0px;
@@ -741,10 +726,14 @@ footer{
 
 
 /* ----------------------------------------- INICIO RESPONSIVE SMARTPHONE ----------------------------------------- */
-@media (width <= 749px) {
+@media (width >= 450px) and (width <= 749px) {
     /*INICIO RESPONSIVE HEADER*/
+    header {
+        height: 11%; /* TAMAÑO DEL ALTO DE LA CABECERA*/
+    }
+
     h1{
-        font-size: 7vw;
+        font-size: 9vw;
     }
 
     .menu-desplegable{
@@ -788,9 +777,10 @@ footer{
         text-decoration: none;
     }
 
-    .menu-icon {
+    .menu-icon { /* ICONO DE MENU HAMBURGUESA*/
         display: block;
         cursor: pointer;
+        margin-right: 2%;
     }
     .menu-horizontal{
         display: none;
@@ -813,22 +803,161 @@ footer{
         
     }
     .text{
-    padding: 20px 10px;
-    display: grid;
-    grid-template-rows: auto 1fr 50px;
-    grid-row-gap: 15px;
-    grid-area: text;
-    position: sticky;
-    text-align: center;
-    z-index: 1;
-    width: 100px;
+        padding: 20px 10px;
+        display: grid;
+        grid-template-rows: auto 1fr 50px;
+        grid-row-gap: 15px;
+        grid-area: text;
+        position: sticky;
+        text-align: center;
+        z-index: 1;
+        width: 100px;
     }
     /*FIN RESPONSIVE NOSOTROS*/
+
+    /* INICIO RESPONSIVE PRODUCTOS */
+    .text_prin { /* TEXTO DE FOTO DE INICIO*/
+        font-size: 7vh;
+        margin-bottom: 55vh;
+        padding: 2vw;
+    }
+    .pizzas, .papas{ /* SECCIÓN PIZZAS (ES LO MISMO QUE .PAPAS*/
+        margin-top: 2%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 3%;
+    }
+    .Cabecera_de_presentacion{ /* TEXTO DONDE SE PRESENTA EL PRODUCTO (PIZZAS O OTROS)*/ 
+        font-size: 12vw;
+        
+        width: 100%;
+        padding: 3px;
+        margin: 0%;  
+    }
+    .tamaño{ /* CONTENEDOR PRODUCTOS (FOTO Y TEXTO DE FOTO) (.R_IMG Y .PARR)*/
+        margin: 2%;
+        width: 30vw; /*20%*/
+        height: 40vw; /*30%*/
+    }
+    .R_img { /* IMAGEN DE PRODUCTO (PIZZA PAPA ETC)*/
+        width: 100%;
+        height: 100%;
+    }
+    .parr{ /* DESCRIPCIÓN/TEXTO DE PRODUCTO (PIZZA PAPA ETC)*/
+        position: absolute;
+        padding: 10px;
+        border-radius: 0px;
+        top: 40%;
+        left: 50%;      
+    
+        font-size: 3vw;
+    }
+    /* FIN RESPONSIVE PRODUCTOS */
 }
 /* ----------------------------------------- FIN RESPONSIVE SMARTPHONE ----------------------------------------- */
 
+/* ----------------------------------------- INICIO RESPONSIVE SMARTPHONE CHICO ----------------------------------------- */
+@media (width <= 450px) {
+    /* INICIO RESPONSIVE HEADER*/
+    header {
+        height: 14%; /* TAMAÑO DEL ALTO DE LA CABECERA*/
+    }
+    h1{
+        margin-left: 2%;
+        font-size: 14vw; /* TEXTO CIAO CIAO DE LA CABECERA*/
+    }
+    .menu-desplegable{ /* CONTENEDOR ELEMENTOS MENU DESPLEGABLE*/
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width:100%;
+
+        background-color: #ff323288;
+        padding: 10px;
+        box-sizing: border-box;
+
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-desplegable.open{ /* HACE VISIBLE EL CONTENEDOR */
+        display: flex !important;
+    }
+
+    .menu-desplegable ul{ /* LISTA DEL CONTENEDOR DE ELEMENTOS*/
+        display: flex;
+
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+
+        list-style: none;
+        padding: 0;
+    }
+    .menu-desplegable li{ 
+        padding: 0.7em;
+    }
+    .menu-desplegable a{
+        color: white;
+        font-size: 2.8vw;
+        text-decoration: none;
+    }
+
+    .menu-icon { /* ICONO DE MENU HAMBURGUESA*/
+        display: block;
+        cursor: pointer;
+        margin-right: 2%;
+    }
+    .menu-horizontal{ /* OCULTA EL MENU HORIZONTAL*/
+        display: none;
+    }
+    /* FIN RESPONSIVE HEADER*/
 
 
+    /* INICIO RESPONSIVE PRODUCTOS */
+    .text_prin { /* TEXTO DE FOTO DE INICIO*/
+        font-size: 11vw;
+        margin-bottom: 55vh;
+        padding: 2vw;
+    }
+    .pizzas, .papas{ /* SECCIÓN PIZZAS (ES LO MISMO QUE .PAPAS*/
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 3%;
+    }
+    .Cabecera_de_presentacion{ /* TEXTO DONDE SE PRESENTA EL PRODUCTO (PIZZAS O OTROS)*/ 
+        font-size: 16vw;
+        
+        width: 100%;
+        padding: 3px;
+        margin: 0%;  
+    }
+    .tamaño{ /* CONTENEDOR PRODUCTOS (FOTO Y TEXTO DE FOTO) (.R_IMG Y .PARR)*/
+        margin: 2%;
+        width: 40vw; /*20%*/
+        height: 55vw; /*30%*/
+    }
+    .R_img { /* IMAGEN DE PRODUCTO (PIZZA PAPA ETC)*/
+        width: 100%;
+        height: 100%;
+    }
+    .parr{ /* DESCRIPCIÓN/TEXTO DE PRODUCTO (PIZZA PAPA ETC)*/
+        position: absolute;
+        padding: 10px;
+        border-radius: 0px;
+        top: 40%;
+        left: 50%;      
+    
+        font-size: 4vw;
+    }
+    /* FIN RESPONSIVE PRODUCTOS */
+}
+/* ----------------------------------------- FIN RESPONSIVE SMARTPHONE CHICO ----------------------------------------- */
 
 
 
