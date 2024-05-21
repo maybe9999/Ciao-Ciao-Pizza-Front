@@ -868,6 +868,11 @@ footer{
     header {
         height: 14%; /* TAMAÑO DEL ALTO DE LA CABECERA*/
     }
+    header img{ /* Ajusta las dimensiones del ICONO de la pagina para el header/cabecera */
+        margin-left: 1%;
+        width: 13%;
+        height: 80%;
+    }
     h1{
         margin-left: 2%;
         font-size: 14vw; /* TEXTO CIAO CIAO DE LA CABECERA*/
