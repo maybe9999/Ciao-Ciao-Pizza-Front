@@ -966,7 +966,7 @@ footer{
     }
 
     .formulario-contacto, #myForm {
-        width: 90%; /* Ajustar el ancho para que sea más estrecho en dispositivos móviles */
+        width: 70%; /* Ajustar el ancho para que sea más estrecho en dispositivos móviles */
         margin: 0 auto; /* Centrar el formulario en dispositivos móviles */
     }
 
