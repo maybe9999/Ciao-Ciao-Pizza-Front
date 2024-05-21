@@ -634,37 +634,45 @@ footer{
     .menu-desplegable{ /* Oculta el menu desplegable que es para pantallas medias*/
         display: none;
     }
+    .main_nosotros{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
     
-.conteiner {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
+    .conteiner {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
 
-    margin-top: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
+        margin-top: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
 
-.imagen {
-    border: 1px;
-    justify-self: center;
-    vertical-align: center;
-}
+    .imagen {
+        border: 1px;
+        justify-self: center;
+        vertical-align: center;
+        width: 100vh;
+    }
 
-.texto {
-    border: 1px;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
+    .texto {
+        border: 1px;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
 
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2vh;
-    color: white;
-    text-align: justify;
-    width: 100vh;
-    justify-self: center;
-    align-self: center;
-    padding: 4vh;
-}
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2vh;
+        color: white;
+        text-align: justify;
+        width: 100vh;
+        justify-self: center;
+        align-self: center;
+        padding: 4vh;
+    }
 
 
 /* ------------------------------------------ Fin main seccion: NOSOTROS -------------------------------------------------*/
@@ -796,36 +804,36 @@ footer{
     .menu-horizontal{
         display: none;
     }
-}
-.conteiner {
+
+    .conteiner {
+        display: grid;
+        grid-template-areas:"image" "text";
+        overflow: scroll;
+        max-height: 100vh;
+    }
+    .imagen{
+        position: relative;
+    }
+    .imagen img{
+        
+        width: 110vh;
+        
+    }
+    .text{
+    padding: 20px 10px;
     display: grid;
-    grid-template-areas:"image" "text";
-    overflow: scroll;
-    max-height: 100vh;
-}
-.imagen{
-    position: relative;
-}
-.imagen img{
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+    grid-area: text;
+    position: sticky;
+    text-align: center;
+    z-index: 1;
+    width: 100px;
     
-    width: 110vh;
-    
-}
-.text{
-   padding: 20px 10px;
-   display: grid;
-   grid-template-rows: auto 1fr 50px;
-   grid-row-gap: 15px;
-   grid-area: text;
-   position: sticky;
-   text-align: center;
-   z-index: 1;
-   width: 100px;
-   
+    }
 }
 
 
 
 
-
-    
+        
