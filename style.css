@@ -115,11 +115,11 @@ h2{
 .conteiner {
     background-color: rgba(0, 0, 0, 0.6);
     width: 300%;
-    overflow: scroll;
+    
    
     margin-top: 6vh;
     display: flex;
-    justify-content: left;
+    justify-content:center;
     grid-template-areas: "image" "text";
 }
 
@@ -624,9 +624,11 @@ footer{
         width: 100%;
 
         margin-top: 8vh;
+
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
+        justify-items: center;
     }
 
     .imagen {
@@ -643,12 +645,15 @@ footer{
 
         font-family: 'Josefin Sans', sans-serif;
         font-size: 2vh;
-        color: white;
         text-align: justify;
+
+        color: white;
+
         width: 100vh;
+        padding: 4vh;
+
         justify-self: center;
         align-self: center;
-        padding: 4vh;
     }
     /* FIN RESPONSIVE NOSOTROS*/
 }
@@ -791,7 +796,7 @@ footer{
     .conteiner {
         display: grid;
         grid-template-areas:"image" "text";
-        overflow: scroll;
+        
         max-height: 100vh;
     }
     .imagen{
@@ -805,6 +810,7 @@ footer{
     .text{
         padding: 20px 10px;
         display: grid;
+        overflow: scroll;
         grid-template-rows: auto 1fr 50px;
         grid-row-gap: 15px;
         grid-area: text;
@@ -836,6 +842,8 @@ footer{
     }
     .tamaño{ /* CONTENEDOR PRODUCTOS (FOTO Y TEXTO DE FOTO) (.R_IMG Y .PARR)*/
         margin: 2%;
+        margin-top: 6%;
+        margin-bottom: 6%;
         width: 30vw; /*20%*/
         height: 40vw; /*30%*/
     }
@@ -844,9 +852,7 @@ footer{
         height: 100%;
     }
     .parr{ /* DESCRIPCIÓN/TEXTO DE PRODUCTO (PIZZA PAPA ETC)*/
-        position: absolute;
         padding: 10px;
-        border-radius: 0px;
         top: 40%;
         left: 50%;      
     
@@ -939,17 +945,17 @@ footer{
     }
     .tamaño{ /* CONTENEDOR PRODUCTOS (FOTO Y TEXTO DE FOTO) (.R_IMG Y .PARR)*/
         margin: 2%;
-        width: 40vw; /*20%*/
-        height: 55vw; /*30%*/
+        margin-top: 6%;
+        margin-bottom: 6%;
+        width: 38vw; /*20%*/
+        height: 52vw; /*30%*/
     }
     .R_img { /* IMAGEN DE PRODUCTO (PIZZA PAPA ETC)*/
         width: 100%;
         height: 100%;
     }
     .parr{ /* DESCRIPCIÓN/TEXTO DE PRODUCTO (PIZZA PAPA ETC)*/
-        position: absolute;
         padding: 10px;
-        border-radius: 0px;
         top: 40%;
         left: 50%;      
     
