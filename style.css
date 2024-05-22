@@ -385,6 +385,7 @@ h2{
     background-color: rgba(0, 0, 0, 0.6); /* Negro con 60% de opacidad */
     border-radius: 10px;
     color: white;
+    overflow: scroll;
 }
 .item{
     background-color: rgba(0, 0, 0, 0.6); /* Negro con 60% de opacidad */
@@ -774,6 +775,44 @@ footer{
     }
     
     /* FIN RESPONSIVE NOSOTROS */
+
+    /*INICIO RESPONSIVE DE NUESTRA CARTA*/
+    
+    .container {
+        width: 90%; /* Cambia el ancho máximo del contenedor */
+        margin-top: 100px; /* Ajusta el margen superior */
+    }
+        
+    .left {
+        width: 300px; /* Ajusta el ancho del elemento "left" */
+    }
+        
+    .contenido {
+        width: 250px; /* Ajusta el ancho del elemento "contenido" */
+    }
+        
+    .cartas {
+         padding: 5px 100px; /* Ajusta el padding de las cartas */
+         width: 60px; /* Ajusta el ancho de las cartas */
+    }
+        
+    .cartas:hover {
+        padding: 5px 100px; /* Ajusta el padding de las cartas al hacer hover */
+    }
+        
+    .carta-imagen img {
+        height: 250px; /* Ajusta la altura de las imágenes en las cartas */
+        width: 230px; /* Ajusta el ancho de las imágenes en las cartas */
+    }
+        
+    .carta-texto {
+        font-size: 14px; /* Ajusta el tamaño de fuente del texto en las cartas */
+    }
+        
+    .footer_social {
+        flex-direction: column; /* Cambia la dirección de los elementos en el footer */
+    }
+
     /*INICIO RESPONSIVE CONTACTO*/
     .contenedor-parrafos{
         margin-top: 5%;
@@ -932,8 +971,53 @@ footer{
         font-size: 3vw;
     }
     /* FIN RESPONSIVE PRODUCTOS */
+
+    /* INICIO NUETSRA CARTA*/
+
+    .container {
+        width: 90%; /* Cambia el ancho máximo del contenedor */
+        margin-top: 100px; /* Ajusta el margen superior */
+    }
+    
+    .left {
+            width: 300px; /* Ajusta el ancho del elemento "left" */
+    }
+    
+    .contenido {
+        width: 250px; /* Ajusta el ancho del elemento "contenido" */
+    }
+    
+    .cartas {
+        padding: 5px 100px; /* Ajusta el padding de las cartas */
+        width: 60px; /* Ajusta el ancho de las cartas */
+    }
+    
+    .cartas:hover {
+        padding: 5px 100px; /* Ajusta el padding de las cartas al hacer hover */
+    }
+    
+    .carta-imagen img {
+        height: 250px; /* Ajusta la altura de las imágenes en las cartas */
+        width: 230px; /* Ajusta el ancho de las imágenes en las cartas */
+    }
+    
+    .carta-texto {
+        font-size: 14px; /* Ajusta el tamaño de fuente del texto en las cartas */
+    }
+    
+    .footer_social {
+        flex-direction: column; /* Cambia la dirección de los elementos en el footer */
+    }
+    .scroll-container {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+          
+        
+    
     /*INICIO RESPONSIVE DE CONTACTO Y FOOTER*/
-    /*INICIO RESPONSIVE CONTACTO*/
+    
     .contenedor-parrafos{
         margin-top: 5%;
         font-size: 25px;
@@ -1125,7 +1209,47 @@ footer{
         font-size: 4vw;
     }
     /* FIN RESPONSIVE PRODUCTOS */
-    /*INICIO RESPONSIVE PARA ANTALLAS MAS PEQUEÑAS DE CONTACTO Y FOOTER*/
+
+    /*INICIO DE RESPONSIVE NUESTRA CARTA*/
+    
+    .container {
+        width: 90%; /* Cambia el ancho máximo del contenedor */
+        margin-top: 100px; /* Ajusta el margen superior */
+        }
+    
+        .left {
+            width: 300px; /* Ajusta el ancho del elemento "left" */
+        }
+    
+        .contenido {
+            width: 250px; /* Ajusta el ancho del elemento "contenido" */
+        }
+    
+        .cartas {
+            padding: 5px 100px; /* Ajusta el padding de las cartas */
+            width: 60px; /* Ajusta el ancho de las cartas */
+        }
+    
+        .cartas:hover {
+            padding: 5px 100px; /* Ajusta el padding de las cartas al hacer hover */
+        }
+    
+        .carta-imagen img {
+            height: 250px; /* Ajusta la altura de las imágenes en las cartas */
+            width: 230px; /* Ajusta el ancho de las imágenes en las cartas */
+        }
+    
+        .carta-texto {
+            font-size: 14px; /* Ajusta el tamaño de fuente del texto en las cartas */
+        }
+    
+        .footer_social {
+            flex-direction: column; /* Cambia la dirección de los elementos en el footer */
+        }
+        /*FIN RESPOSIVE NUESTRA CARTA*/
+
+
+ /*INICIO RESPONSIVE PARA ANTALLAS MAS PEQUEÑAS DE CONTACTO Y FOOTER*/
     /* Estilos para dispositivos móviles */
     .contenedor-parrafos {
         margin-top: 30%; /* Reducir aún más el margen en pantallas muy pequeñas */
@@ -1145,7 +1269,7 @@ footer{
     }
     .redes-sociales{
         display: flex;
-        align-items: center;
+        align-items: end;
         justify-content: center;
         text-align: center;
         
@@ -1156,6 +1280,14 @@ footer{
     .redes-sociales img{
         max-width: 100%; /* ASEGURA QUE LAS IMAGENES SE AJUSTEN AL CONTENEDORR*/
     }
+    .whatsapp-btn {
+        margin-top: 10px; /* Ajusta este valor para subir el botón más arriba */
+        margin-right: 20px; /* Mantén el margen derecho */
+        margin-bottom: 50px; /* Mantén el margen inferior */
+        margin-left: 70px; /* Mantén el margen izquierdo */
+        padding: 10px; /* Mantén el padding */
+    }
+    
 }
 /* ----------------------------------------- FIN RESPONSIVE SMARTPHONE CHICO ----------------------------------------- */
 
