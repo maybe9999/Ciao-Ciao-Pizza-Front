@@ -976,12 +976,15 @@ footer{
     /* INICIO NUETSRA CARTA*/
 
     .container {
-        width: 90%; /* Cambia el ancho máximo del contenedor */
-        margin-top: 100px; /* Ajusta el margen superior */
+        width: 90vh; /* Cambia el ancho máximo del contenedor */
+        margin-top: 20vh; /* Ajusta el margen superior */
     }
-    
+    .header-container {
+        width: 628px;
+        height: 40px;
+      }
     .left {
-            width: 300px; /* Ajusta el ancho del elemento "left" */
+            width: 328px; /* Ajusta el ancho del elemento "left" */
     }
     
     .contenido {
@@ -989,17 +992,13 @@ footer{
     }
     
     .cartas {
-        padding: 5px 100px; /* Ajusta el padding de las cartas */
-        width: 60px; /* Ajusta el ancho de las cartas */
+        width: 70px; /* Ajusta el ancho de las cartas */
     }
     
-    .cartas:hover {
-        padding: 5px 100px; /* Ajusta el padding de las cartas al hacer hover */
-    }
     
     .carta-imagen img {
-        height: 250px; /* Ajusta la altura de las imágenes en las cartas */
-        width: 230px; /* Ajusta el ancho de las imágenes en las cartas */
+        height: 300px; /* Ajusta la altura de las imágenes en las cartas */
+        width: 280px; /* Ajusta el ancho de las imágenes en las cartas */
     }
     
     .carta-texto {
@@ -1009,11 +1008,6 @@ footer{
     .footer_social {
         flex-direction: column; /* Cambia la dirección de los elementos en el footer */
         font-family: 'Josefin Sans', sans-serif;
-    }
-    .scroll-container {
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
     }
           
         
@@ -1219,7 +1213,7 @@ footer{
         grid-gap: 1px; /* Espacio entre elementos */
         position: relative; /* Asegurar que la posición sea relativa */
         z-index: 1; /* Asegurar que los elementos de header estén por encima de los elementos de left */
-        width: 60vh;
+        width: 45vh;
         height: 140px;
     }
     .header-cartas{
@@ -1232,18 +1226,23 @@ footer{
             max-width: 90%; /* Establecer un ancho máximo del contenedor */
             margin-top: 20vh; /* Reducir el margen superior */
             padding: 5px; /* Reducir el relleno */
-            height: 175vh;
+            height: 110vh;
     }
     .left {
-        width: 60vh;
+        width: 45vh;
+        height: 280px;
     }
     .cartas{
         width: 30vh;
         padding: 5px 60px;
     }
+    .carta-imagen img {
+        height: 320px;
+        width: 370px;
+      }
     .contenido{
-        width: 270px;
-        height: 240px;
+        width: 360px;
+        height: 320px;
     }
 /* ----------------------------------------- FIN RESPONSIVE SMARTPHONE CHICO CARTA*/
     
