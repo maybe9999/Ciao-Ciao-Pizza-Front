@@ -945,13 +945,13 @@ footer{
     }
     
     .formulario-contacto{
-    width: 50%;
+    width: 80%;
    
     
 }
     
     #myForm{
-        width: 50%;
+        width: 80%;
        
     }
     /* INICIO RESPONSIVE FOOTER DE CONTACTO*/
@@ -972,6 +972,20 @@ footer{
 
     .izquierda, .parrafo {
         text-align: center; /* Centrar el texto en dispositivos móviles */
+    }
+
+    .redes-sociales{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .redes-sociale li{
+        margin: 0 10px; /*AJUSTA EL MARGEN ENTRE LOS ÍCONOS*/
+    }
+    .redes-sociales img{
+        max-width: 100%; /* ASEGURA QUE LAS IMAGENES SE AJUSTEN AL CONTENEDORR*/
     }
 }
 
@@ -1123,11 +1137,24 @@ footer{
     }
 
     .formulario-contacto, #myForm {
-        width: 50%; /* Ajustar el ancho para que sea más estrecho en pantallas muy pequeñas */
+        width: 80%; /* Ajustar el ancho para que sea más estrecho en pantallas muy pequeñas */
     }
 
     .izquierda, .parrafo {
         text-align: center; /* Centrar el texto en pantallas muy pequeñas */
+    }
+    .redes-sociales{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .redes-sociale li{
+        margin: 0 10px; /*AJUSTA EL MARGEN ENTRE LOS ÍCONOS*/
+    }
+    .redes-sociales img{
+        max-width: 100%; /* ASEGURA QUE LAS IMAGENES SE AJUSTEN AL CONTENEDORR*/
     }
 }
 /* ----------------------------------------- FIN RESPONSIVE SMARTPHONE CHICO ----------------------------------------- */
