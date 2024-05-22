@@ -777,10 +777,10 @@ footer{
     /*INICIO RESPONSIVE CONTACTO*/
     .contenedor-parrafos{
         margin-top: 5%;
-        font-size: 25px;
+        font-size: 30px;
     }
     .parrafo{
-        font-size: 25px;
+        font-size: 15px;
     }
     
     .formulario-contacto{
@@ -1114,7 +1114,7 @@ footer{
     /*INICIO RESPONSIVE PARA ANTALLAS MAS PEQUEÑAS DE CONTACTO Y FOOTER*/
     /* Estilos para dispositivos móviles */
     .contenedor-parrafos {
-        margin-top: 2%; /* Reducir aún más el margen en pantallas muy pequeñas */
+        margin-top: 30%; /* Reducir aún más el margen en pantallas muy pequeñas */
         font-size: 18px; /* Reducir el tamaño de fuente en pantallas muy pequeñas */
     }
 
