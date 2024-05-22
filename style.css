@@ -27,6 +27,7 @@ body.nosotros{
 /* body.nuestra-carta para sólo utilizar la imágen de fondo en otro navegador*/
 body.nuestra-carta {
     background-image: url('./img/portada_productos_11zon.webp');
+    min-height: 100vh;
 }
 /*body.contacto para su fondo de pantalla*/
 body.contacto{
@@ -1212,9 +1213,6 @@ footer{
     /* FIN RESPONSIVE PRODUCTOS */
 
     /* ----------------------------------------- INICIO RESPONSIVE SMARTPHONE CHICO CARTA*/
-     body.nuestra-carta {
-        min-height: 100vh;
-    }
     .header-container {
         display: grid; /* Usar grid para organizar los elementos */
         grid-template-columns: 1fr; /* Definir una sola columna */
