@@ -1212,7 +1212,9 @@ footer{
     /* FIN RESPONSIVE PRODUCTOS */
 
     /* ----------------------------------------- INICIO RESPONSIVE SMARTPHONE CHICO CARTA*/
-    
+     body.nuestra-carta {
+        min-height: 100vh;
+    }
     .header-container {
         display: grid; /* Usar grid para organizar los elementos */
         grid-template-columns: 1fr; /* Definir una sola columna */
