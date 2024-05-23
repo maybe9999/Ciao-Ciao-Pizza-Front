@@ -27,6 +27,7 @@ body.nosotros{
 /* body.nuestra-carta para sólo utilizar la imágen de fondo en otro navegador*/
 body.nuestra-carta {
     background-image: url('./img/portada_productos_11zon.webp');
+    min-height: 100vh;
 }
 /*body.contacto para su fondo de pantalla*/
 body.contacto{
@@ -975,12 +976,15 @@ footer{
     /* INICIO NUETSRA CARTA*/
 
     .container {
-        width: 90%; /* Cambia el ancho máximo del contenedor */
-        margin-top: 100px; /* Ajusta el margen superior */
+        width: 90vh; /* Cambia el ancho máximo del contenedor */
+        margin-top: 20vh; /* Ajusta el margen superior */
     }
-    
+    .header-container {
+        width: 628px;
+        height: 40px;
+      }
     .left {
-            width: 300px; /* Ajusta el ancho del elemento "left" */
+            width: 328px; /* Ajusta el ancho del elemento "left" */
     }
     
     .contenido {
@@ -988,17 +992,13 @@ footer{
     }
     
     .cartas {
-        padding: 5px 100px; /* Ajusta el padding de las cartas */
-        width: 60px; /* Ajusta el ancho de las cartas */
+        width: 70px; /* Ajusta el ancho de las cartas */
     }
     
-    .cartas:hover {
-        padding: 5px 100px; /* Ajusta el padding de las cartas al hacer hover */
-    }
     
     .carta-imagen img {
-        height: 250px; /* Ajusta la altura de las imágenes en las cartas */
-        width: 230px; /* Ajusta el ancho de las imágenes en las cartas */
+        height: 300px; /* Ajusta la altura de las imágenes en las cartas */
+        width: 280px; /* Ajusta el ancho de las imágenes en las cartas */
     }
     
     .carta-texto {
@@ -1008,11 +1008,6 @@ footer{
     .footer_social {
         flex-direction: column; /* Cambia la dirección de los elementos en el footer */
         font-family: 'Josefin Sans', sans-serif;
-    }
-    .scroll-container {
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
     }
           
         
@@ -1212,14 +1207,13 @@ footer{
     /* FIN RESPONSIVE PRODUCTOS */
 
     /* ----------------------------------------- INICIO RESPONSIVE SMARTPHONE CHICO CARTA*/
-    
     .header-container {
         display: grid; /* Usar grid para organizar los elementos */
         grid-template-columns: 1fr; /* Definir una sola columna */
-        grid-gap: 10px; /* Espacio entre elementos */
+        grid-gap: 1px; /* Espacio entre elementos */
         position: relative; /* Asegurar que la posición sea relativa */
         z-index: 1; /* Asegurar que los elementos de header estén por encima de los elementos de left */
-        width: 60vh;
+        width: 45vh;
         height: 140px;
     }
     .header-cartas{
@@ -1227,18 +1221,28 @@ footer{
         margin-bottom: 0px;
     }
     .container {
-            display: block; /* Cambiar de grid a bloque para que los elementos se muestren uno debajo del otro */
-            width: auto; /* Ancho automático para adaptarse al contenido */
+            display: table; /* Cambiar de grid a bloque para que los elementos se muestren uno debajo del otro */
+            width: 62vh; /* Ancho automático para adaptarse al contenido */
             max-width: 90%; /* Establecer un ancho máximo del contenedor */
-            margin-top: 30vh; /* Reducir el margen superior */
+            margin-top: 20vh; /* Reducir el margen superior */
             padding: 5px; /* Reducir el relleno */
+            height: 110vh;
     }
     .left {
-        width: 60vh;
+        width: 45vh;
+        height: 280px;
     }
     .cartas{
         width: 30vh;
         padding: 5px 60px;
+    }
+    .carta-imagen img {
+        height: 320px;
+        width: 370px;
+      }
+    .contenido{
+        width: 360px;
+        height: 320px;
     }
 /* ----------------------------------------- FIN RESPONSIVE SMARTPHONE CHICO CARTA*/
     
@@ -1295,253 +1299,3 @@ footer{
 
 
 
-
-
-
-
-
-
-/*                  ESTO SECCIÓN YA ESTABA... LA COMENTE POR QUE HAY UNA PARTE QUE ENTRA EN CONFLICTO/PISA 
-                    EL HEAEDER, SI HAY ALGO QUE USTEDES PROGRAMARON ACÁ AGRÉGUENLO ARRIBA                    /
-
-/* RESPONSIVE DESIGN /
-@media(max-width: 992px){
-    /* Barra de Navegación /
-    .nav{
-        justify-content: flex-end;
-        gap: 40%;
-    }
-    
-    .navbar{
-        display: none;
-    }
-
-    .navtoggle{
-        display: block;
-    }
-
-    .menu-desplegable{
-        display: block;
-    }
-
-    .nav .btnLogin-popup{
-        display: none;
-    }
-
-    /* Inicio /
-    .content{
-        grid-column-end: 9;
-        grid-row-start: 3;
-        grid-row-end: 5;
-        align-items: center;
-    }
-
-    .content h1{
-        font-size: 3em;
-    }
-
-    .content p{
-        font-size: 1.1em;
-    }
-
-    /* Nosotros/
-    .text h2 {
-        font-size: 24px; 
-    }
-
-    .parrafo p {
-        font-size: 16px;
-    }
-
-    .tarjetas-container .tarjeta p{
-        font-size: 1.2em;
-    }
-
-
-    /* dolar /
-    .dolar .container{
-        flex-direction: column;
-    }
-
-    .dolar .container h2{
-        font-size: 2.5em;
-        margin-bottom: 40px;
-    }
-
-    .tarjetas{
-        flex-wrap: wrap;
-    }
-
-    /* contacto /
-    .contact-us{
-        padding: 75px;
-        display: block;
-    }
-
-    .contact-us .title{
-        margin-bottom: 5%;
-    }
-
-    .box{
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "form"
-        "info"
-        "map";
-    }
-
-    .input-box textarea{
-        min-height: 150px;
-    }
-
-    .map{
-        min-height: 300px;
-    }
-
-    /* Footer /
-    .footer-logo{
-        width: 40%;
-        padding-left: 40px;
-    }
-
-    .footer-col{
-        width: 40%;
-        margin-bottom: 30px;
-    }
-}
-
-@media(max-width: 768px){
-    /* Barra de Navegación /
-    .menu-desplegable{
-        left: 2em;
-        width: unset;
-    }
-    .slider-nav{
-        grid-column-end: auto;
-    }
-
-
-    /* Inicio /
-    .content.active{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    /* Nosotros /
-    .text h2 {
-        font-size: 24px;
-    }
-
-    .parrafo p {
-        font-size: 16px;
-    }
-
-    .tarjetas-container .tarjeta i{
-        font-size: 2.5em;
-    }
-
-    .tarjetas-container .tarjeta p{
-        font-size: 1em;
-    }
-
-    /* Footer /
-    .footer-logo{
-        width: 40%;
-        padding-left: 40px;
-    }
-
-    .row{
-        justify-content: space-around;
-    }
-
-    .footer-col{
-        width: 40%;
-        margin-bottom: 30px;
-    }
-    /*FIN NOSOTROS/
-}
-
-@media(max-width: 576px){
-    /* inicio /
-    .content{
-        grid-column-end: 12;
-        grid-row-start: 3;
-        grid-row-end: 5;
-        align-items: center;
-    }
-
-    .slider-nav{
-        grid-column-end: auto;
-    }
-
-    .wrapper{
-        width: 80%;
-        height: 70%;
-    }
-
-    .login h2{
-        font-size: 1.5em;
-        margin: 0 0 65px 0;
-    }
-
-    /* nosotros /
-    .nosotros .contenido h2{
-        font-size: 2em;
-    }
-
-    .nosotros .contenido {
-        padding: 0 20px;
-    }
-
-    .tarjetas-container{
-        padding: 40px 0;
-    }
-
-    /* dolar /
-    .dolar .container{
-        padding: 30px 0 30px 0;
-    }
-
-    .dolar .container h2{
-        font-size: 2em;
-        margin-bottom: 20px;
-    }
-
-    /* contacto /
-
-    .contact-us{
-        padding: 40px 0;
-    }
-
-    .contact-us .title h2{
-        font-size: 1.2em;
-    }
-
-    /* footer /
-    .footer{
-        padding: 2em 0 1em;
-    }
-    .footer-container{
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .footer-col{
-        padding: 0;
-    }
-
-    .footer-logo{
-        padding: 0;
-        margin-bottom: 2em;
-    }
-
-    .redes a:not(:last-child){
-        margin-right: 0.4em;
-
-    }
-}
-*/
