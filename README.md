@@ -4,7 +4,7 @@
 
 Este proyecto es sobre una pizzeria ubicada en Entre Rios, Ciao Ciao Pizza, abarca solo el Front End. 
 Consiste en una pagina web que permite al usuario conocer un poco mas sobre la pizzeria, ver los productos, contactar con el local. </br>
-CiaoCiaoPizza con el Front End y el Back End integrados: [https://github.com/maybe9999/CiaoCiaoPizza](https://github.com/maybe9999/CiaoCiaoPizza)
+CiaoCiaoPizza con el Front End y el Back End integrados: [https://github.com/maybe9999/CiaoCiaoPizza](https://github.com/maybe9999/Ciao-Ciao-Pizza-Front)
 
 ## Tecnologias usadas:
 * **Html**
